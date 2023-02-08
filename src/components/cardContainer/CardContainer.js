@@ -4,11 +4,11 @@ import './CardContainer.css';
 
 const CardContainer = ({ books }) => {
   return (
-    <>
+    <div className="cardContainer">
       {books.map((book, index) => (
         <Card key={index} book={book} />
       ))}
-    </>
+    </div>
   );
 };
 
