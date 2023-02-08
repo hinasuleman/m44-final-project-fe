@@ -20,12 +20,12 @@ const Card = ({ book }) => {
   };
   return (
     <div className="bookCard">
-    <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/>
+      <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/>
       <br></br>
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
-      <button onClick={postToDb}>Add to Library</button>
-      <button onClick={postToDb}>Add to Wishlist</button>
+      {/* <button onClick={postToDb}>Add to Library</button>
+      <button onClick={postToDb}>Add to Wishlist</button> */}
     </div>
 
   );

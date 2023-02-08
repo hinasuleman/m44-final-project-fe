@@ -3,6 +3,7 @@ import Card from "../card/Card";
 import './CardContainer.css';
 
 const CardContainer = ({ books }) => {
+  console.log(`CardContainer ${books}`);
   return (
     <div className="cardContainer">
       {books.map((book, index) => (

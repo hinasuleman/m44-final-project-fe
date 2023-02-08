@@ -1,8 +1,8 @@
 
 import './App.css';
 import { useState } from "react";
-import BookSearch from './components/modals/bookSearchModal/BookSearchModal';
-
+import BookSearchModal from './components/modals/bookSearchModal/BookSearchModal';
+import CardContainer from "./components/cardContainer/CardContainer";
 //set books state at app level
 
 function App() {
@@ -10,8 +10,9 @@ function App() {
 
   return (
     <div className="App">
-      <BookSearch/>
-    </div>
+    <BookSearchModal setBooks={setBooks} />
+    <CardContainer books={books} />
+  </div>
   );
 }
 
