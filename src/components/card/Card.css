@@ -1,0 +1,15 @@
+.bookCard {
+    padding: 10px;
+    border: 1px;
+    border-color: black;
+    margin: 10px;
+};
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+};
+
+.author {
+    font-size: 16px;
+}

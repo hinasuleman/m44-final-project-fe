@@ -1,0 +1,4 @@
+CardContainer {
+    display: flex;
+    flex-direction: row;
+}

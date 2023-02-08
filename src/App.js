@@ -1,8 +1,13 @@
 
 import './App.css';
-import BookSearch from './components/BookSearch';
+import { useState } from "react";
+import BookSearch from './components/modals/bookSearchModal/BookSearchModal';
+
+//set books state at app level
 
 function App() {
+  const [books, setBooks] = useState([]);
+
   return (
     <div className="App">
       <BookSearch/>

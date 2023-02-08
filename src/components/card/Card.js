@@ -4,6 +4,7 @@ import './Card.css';
 const Card = ({ book }) => {
   const postToDb = (e) => {
     e.preventDefault();
+    //below code needed to write to DB
     // const newBook = {
     //   title: book.volumeInfo.title,
     //   author: book.volumeInfo.authors[0],
