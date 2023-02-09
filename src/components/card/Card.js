@@ -16,19 +16,23 @@ const Card = ({ book }) => {
     //   publishedDate: book.volumeInfo.publishedDate,
     // };
     // console.log in lieu of POST fetch request
-    console.log("!!!!!!!: ", book);
+    
   };
+    console.log("!!!!!!!: ", book);
+    book.volumeInfo.imageLinks.thumbnail ? console.log("Thumbnail here") : console.log("No Thumbnail");
   return (
     <div className="bookCard">
-      <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/>
+      
       <br></br>
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
-      {/* <button onClick={postToDb}>Add to Library</button>
-      <button onClick={postToDb}>Add to Wishlist</button> */}
+      <button onClick={postToDb}>Add to Library</button>
+      <button onClick={postToDb}>Add to Wishlist</button>
     </div>
 
   );
 };
 
 export default Card;
+
+//{book.volumeInfo.imageLinks.thumbnail ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
