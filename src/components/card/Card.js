@@ -21,7 +21,7 @@ const Card = ({ book }) => {
   
   return (
     <div className="bookCard">
-      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
+      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
       <br></br>
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
@@ -36,4 +36,4 @@ export default Card;
 
 //{book.volumeInfo.imageLinks.thumbnail ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
 
-{/* <img src="../../images/blankCover.jpg" alt=""/> */}
+//<img src="../../images/blankCover.jpg" alt=""/>
