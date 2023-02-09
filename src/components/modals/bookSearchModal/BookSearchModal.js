@@ -3,14 +3,14 @@ import "./BookSearchModal.css";
 import { useState } from "react";
 import { fetchBooks } from "../../../utilities/utilities";
 
-function BookSearchModal({setBooks}) {
+function BookSearchModal({setBooks, fetchError, setFetchError }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("intitle");
 
   const handleSearch = (e) => {
     console.log('Submitting form');
     e.preventDefault();
-    fetchBooks(searchTerm, searchType, setBooks);
+    fetchBooks(searchTerm, searchType, setBooks, setFetchError, fetchError);
   };
 
   return (
