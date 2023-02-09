@@ -2,7 +2,7 @@ import React from "react";
 import './Card.css';
 
 const Card = ({ book }) => {
-  const postToDb = (e) => {
+  const postToLibrary = (e) => {
     e.preventDefault();
     //below code needed to write to DB
     // const newBook = {
@@ -18,16 +18,15 @@ const Card = ({ book }) => {
     // console.log in lieu of POST fetch request
     
   };
-    console.log("!!!!!!!: ", book);
-    book.volumeInfo.imageLinks.thumbnail ? console.log("Thumbnail here") : console.log("No Thumbnail");
+  
   return (
     <div className="bookCard">
-      
+      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
       <br></br>
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
-      <button onClick={postToDb}>Add to Library</button>
-      <button onClick={postToDb}>Add to Wishlist</button>
+      <button onClick={postToLibrary}>Add to Library</button>
+      <button onClick={console.log("add to wishlist")}>Add to Wishlist</button>
     </div>
 
   );
@@ -36,3 +35,5 @@ const Card = ({ book }) => {
 export default Card;
 
 //{book.volumeInfo.imageLinks.thumbnail ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
+
+{/* <img src="../../images/blankCover.jpg" alt=""/> */}

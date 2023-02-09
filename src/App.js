@@ -7,11 +7,15 @@ import CardContainer from "./components/cardContainer/CardContainer";
 
 function App() {
   const [books, setBooks] = useState([]);
+  const [user, setUser] = useState([]);
+
+//need to set user at app level to pass down to the card component so the user ID can be passed to the DB
+
 
   return (
     <div className="App">
     <BookSearchModal setBooks={setBooks} />
-    <CardContainer books={books} />
+    <CardContainer books={books} user={user}/>
   </div>
   );
 }
