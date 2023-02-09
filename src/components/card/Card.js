@@ -26,7 +26,7 @@ const Card = ({ book }) => {
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
       <button onClick={postToLibrary}>Add to Library</button>
-      <button onClick={console.log("add to wishlist")}>Add to Wishlist</button>
+      <button >Add to Wishlist</button>
     </div>
 
   );

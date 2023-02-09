@@ -3,8 +3,6 @@ import Card from "../card/Card";
 import './CardContainer.css';
 
 const CardContainer = ({ books, fetchError }) => {
-  console.log(`CardContainer ${books}`);
-
   if(!fetchError){
     return (
       <div className="cardContainer">
