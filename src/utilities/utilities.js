@@ -8,3 +8,7 @@ export const fetchBooks = async (searchTerm, searchType, setBooks) => {
   setBooks(data.items);
   console.log(`fetchBooks:${data.items}`);
 };
+
+export const postToWishlist = async () => {
+  
+}
