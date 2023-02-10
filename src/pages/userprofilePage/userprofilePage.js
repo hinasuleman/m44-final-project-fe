@@ -12,9 +12,6 @@ export default function UserprofilePage() {
         console.log(state)
         
     }
-
-
-
   function submitHandler1(event) {
     event.preventDefault()
     console.log("userprofile functionality");
