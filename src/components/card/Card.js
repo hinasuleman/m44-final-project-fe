@@ -6,6 +6,7 @@ const Card = ({ book }) => {
     e.preventDefault();
     //below code needed to write to DB
     // const newBook = {
+    //   id: book.id,
     //   title: book.volumeInfo.title,
     //   author: book.volumeInfo.authors[0],
     //   isbn: book.volumeInfo.industryIdentifiers[0].identifier,
