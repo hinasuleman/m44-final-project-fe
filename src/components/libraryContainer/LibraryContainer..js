@@ -1,13 +1,13 @@
 import React from "react";
-import Card from "../card/Card";
-import './CardContainer.css';
+import LibraryCard from "";
+import './LibraryContainer.css';
 
-const CardContainer = ({ books, fetchError }) => {
+const LibraryContainer = ({ books, fetchError }) => {
   if(!fetchError){
     return (
-      <div className="cardContainer">
+      <div className="LibraryContainer">
         {books.map((book, index) => (
-          <Card key={index} book={book} />
+          <LibraryCard key={index} book={book} />
         ))}
       </div>
     );
@@ -25,4 +25,4 @@ const ErrorInFetchBooks = () => {
   );
 }
 
-export default CardContainer;
+export default LibraryContainer;
