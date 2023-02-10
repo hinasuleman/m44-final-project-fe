@@ -1,5 +1,5 @@
 import React from "react";
-import WishlistCard from "";
+import WishlistCard from "../wishlistCard/WishlistCard";
 import './WishlistContainer.css';
 
 const WishlistContainer = ({ books, fetchError }) => {
