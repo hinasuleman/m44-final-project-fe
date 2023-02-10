@@ -7,10 +7,10 @@ function BookSearchModal({setBooks, fetchError, setFetchError }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("intitle");
 
-  const handleSearch = (e) => {
-    console.log('Submitting form');
+  const handleSearch = async (e) => {
     e.preventDefault();
-    fetchBooks(searchTerm, searchType, setBooks, setFetchError, fetchError);
+    const data = await fetchBooks(searchTerm, searchType, setBooks, setFetchError, fetchError);
+    await setBooks(data.items);
   };
 
   return (
