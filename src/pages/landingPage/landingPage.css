@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  background-color: blueviolet;
+  font-size: 100px;
+  text-align: center;
+  padding: 15px;
+  flex-basis: 50px;
+  width: 300px;
+  height: 400px;
+}
+
+body {
+  /* background-image: url("C:/Users/soban/Desktop/Images/homeBookCase.png"); */
+  background-color: #cccccc;
+  background-size: cover;
+}
+
+#outerBox {
+  background-color: red;
+  display: flex;
+  width: 450px;
+  height: 400px;
+}
+
+#innerBox {
+  background-color: blue;
+}
+
+#Email {
+  background-color: none;
+}
+
+#Password {
+  background-color: none;
+}
