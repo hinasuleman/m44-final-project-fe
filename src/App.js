@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPage/landingPage";
 import MainPage from "./pages/mainPage/mainPage";
+import SignupPage from "./pages/signupPage/sigupPage";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -22,6 +23,7 @@ function App() {
                   user={user}
                 />
           }/>
+          <Route exact path="/signuppage" element={<SignupPage />} />
         </Routes>
       </div>
     </BrowserRouter>
