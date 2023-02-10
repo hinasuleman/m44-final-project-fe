@@ -7,12 +7,29 @@ export default function LandingPage() {
   }
   return (
     <div>
-      {/* <form onSubmit={submitHandler}>
-        <input onChange={(event) => setEmail(event.target.value)} />
-        <input onChange={(event) => setPassword(event.target.value)} />
-      </form> */}
+      {/* <form onSubmit={submitHandler}> */}
+      <form>
+        {/* <label for="Input"></label> */}
+        <input
+          type="text"
+          id="Email"
+          placeholder="Input: Email"
+          // onChange={(event) => setEmail(event.target.value)}
+        />
+        <br></br>
+        {/* <label for="Input"></label> */}
+        <input
+          type="text"
+          id="Password"
+          placeholder="Input: Password"
+          // onChange={(event) => setPassword(event.target.value)}
+        />
+      </form>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleLogin}>Sign up!</button>
+      <div class="box outerBox">outerBox</div>
+      <br></br>
+      <div class="box outerBox">innerBox</div>
     </div>
   );
 }
