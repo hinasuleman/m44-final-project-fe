@@ -7,13 +7,13 @@ export default function SignupPage() {
   }
   return (
     <div>
-      {/* <form onSubmit={submitHandler}>
-        <input onChange={(event) => setFirstNamevent.target.value)} />
+      <form onSubmit={submitHandler}>
+        <input onChange={(event) => setFirstName(event.target.value)} />
         <input onChange={(event) => setSurname(event.target.value)} />
         <input onChange={(event) => setEmail(event.target.value)} />
         <input onChange={(event) => confirmEmail(event.target.value)} />
         <input onChange={(event) => setPassword(event.target.value)} />
-      </form> */}
+      </form>
      <button onClick={handleSignup}>Sign up!</button>
     </div>
   );
