@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPage/landingPage";
 import MainPage from "./pages/mainPage/mainPage";
 import SignupPage from "./pages/signupPage/sigupPage";
+//import logo from './logo.svg';
+import './App.css';
+import Navbar from './components/navigation/Navbar';
 
 function App() {
   const [books, setBooks] = useState([]);
