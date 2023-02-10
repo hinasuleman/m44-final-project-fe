@@ -1,20 +1,36 @@
-import React from "react";
+import {useState} from "react";
 import "./signupPage.css";
 
 export default function SignupPage() {
-  function handleSignup() {
+    const [firstName, setFirstName] = useState("")
+    const [surname, setSurname] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirmEmail, setConfirmEmail] = useState("")
+
+    function changehandler(event, setter, state) {
+        setter(event.target.value)
+        console.log(state)
+        
+    }
+
+
+
+  function submitHandler(event) {
+    event.preventDefault()
     console.log("signup functionality");
   }
   return (
     <div>
-      <form onSubmit={submitHandler}>
-        <input onChange={(event) => setFirstName(event.target.value)} />
-        <input onChange={(event) => setSurname(event.target.value)} />
-        <input onChange={(event) => setEmail(event.target.value)} />
-        <input onChange={(event) => confirmEmail(event.target.value)} />
-        <input onChange={(event) => setPassword(event.target.value)} />
+      <form onSubmit={(event) => submitHandler(event)}>
+        <input placeholder="first name" onChange={(event) => changehandler(event,setFirstName,firstName)} />
+        <input placeholder= "surname" onChange={(event) => changehandler(event,setSurname,surname)} />
+        <input placeholder="email" onChange={(event) => changehandler(event,setEmail,email)} />
+        <input placeholder= "confirm email" onChange={(event) => changehandler(event,setConfirmEmail,confirmEmail)} />
+        <input placeholder= "password" onChange={(event) => changehandler(event,setPassword, password)} />
+        <button type="submit">Sign up!</button>
       </form>
-     <button onClick={handleSignup}>Sign up!</button>
+     
     </div>
   );
 }

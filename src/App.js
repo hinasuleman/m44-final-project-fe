@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPage/landingPage";
+import SignupPage from "./pages/signupPage/sigupPage";
+
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -12,6 +14,7 @@ function App() {
       <div>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/signuppage" element={<SignupPage />} />
         </Routes>
       </div>
     </BrowserRouter>
