@@ -5,7 +5,7 @@ import WishlistPage from "../../pages/wishlistPage/wishlistPage";
 import UserprofilePage from"../../pages/userprofilePage/userprofilePage";
 import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar () {
 
         return(
             <>
