@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@100&display=swap");
+
 .NavbarItems{
     display: flex;
     justify-content: space-between;
