@@ -12,8 +12,10 @@ function Navbar () {
                     
                     <li><NavLink to="/wishlistPage" activeClassName="active">Wish List</NavLink></li>
                     
+                    {/* <li><NavLink to="/" activeClassName="active">Share</NavLink></li> */}
                     <li><p>Share</p></li>
                     
+                    {/* <li><NavLink to="/" activeClassName="active">Community</NavLink></li> */}
                     <li><p>Community</p></li>
                     
                     <li><NavLink to="/userprofilePage" activeClassName="active">Profile</NavLink></li>

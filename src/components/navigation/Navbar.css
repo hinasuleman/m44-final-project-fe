@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@100&display=swap");
 
 .NavbarItems{
     display: flex;
@@ -15,6 +15,8 @@
     top: 12px;
     left: 50%;
     transform: translate(-50%);
+    font-family: "Outfit", sans-serif;
+    text-decoration: none !important;
 }
 
 .logo{
@@ -30,25 +32,23 @@
     align-items: center;
     text-align: center;
     justify-content: end;
+    text-decoration: none !important;
 }
 
-/* .navLinks{
-    text-decoration: none;
+ .navMenu li{
+    text-decoration: none !important;
+    font-weight: 700;
     color: rgb(30, 30, 30, 100%);
     padding: 11px 16px;
     white-space: nowrap;
+    border-radius: 12px;
 }
 
-.navLinks i{
+/* .navMenu i{
     padding-right: 11px;
-}
-
-.navLinks:hover{
-    background: rgb(185, 177, 162);
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out;
-}
-
-.menuIcons{
-    display: none;
 } */
+
+.navMenu li:hover{
+    background: rgb(185, 177, 162);
+    transition:0.5s ease-in-out;
+}
