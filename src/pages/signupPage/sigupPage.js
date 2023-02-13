@@ -21,7 +21,7 @@ export default function SignupPage() {
     console.log("signup functionality");
   }
   return (
-    <div>
+    <div className="signupContainer">
       <form onSubmit={(event) => submitHandler(event)}>
         <input placeholder="first name" onChange={(event) => changehandler(event,setFirstName,firstName)} />
         <input placeholder= "surname" onChange={(event) => changehandler(event,setSurname,surname)} />
@@ -30,7 +30,6 @@ export default function SignupPage() {
         <input placeholder= "password" onChange={(event) => changehandler(event,setPassword, password)} />
         <button type="submit">Sign up!</button>
       </form>
-     
     </div>
   );
 }
