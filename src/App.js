@@ -5,6 +5,7 @@ import MainPage from "./pages/mainPage/mainPage";
 import SignupPage from "./pages/signupPage/sigupPage";
 //import logo from './logo.svg';
 import './App.css';
+import UserprofilePage from "./pages/userprofilePage/userprofilePage";
 // import Navbar from './components/navigation/Navbar';
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
                   user={user}
                   setUser={setUser}
                 />
-          }/>
+              }/>
+          <Route exact path= "/userprofilepage" element={<UserprofilePage/>} />
           <Route exact path="/signuppage" element={<SignupPage />} />
         </Routes>
       </div>
