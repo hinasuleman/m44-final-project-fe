@@ -5,7 +5,7 @@ import MainPage from "./pages/mainPage/mainPage";
 import SignupPage from "./pages/signupPage/sigupPage";
 //import logo from './logo.svg';
 import './App.css';
-// import Navbar from './components/navigation/Navbar';
+import Navbar from './components/navigation/Navbar';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -14,20 +14,20 @@ function App() {
 
   return (
     <BrowserRouter>
-    {/* <Navbar /> */}
+      <Navbar />
       <div>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/mainpage" element={
-                <MainPage 
-                  setBooks={setBooks}
-                  fetchError={fetchError}
-                  setFetchError={setFetchError}
-                  books={books}
-                  user={user}
-                  setUser={setUser}
-                />
-          }/>
+            <MainPage
+              setBooks={setBooks}
+              fetchError={fetchError}
+              setFetchError={setFetchError}
+              books={books}
+              user={user}
+              setUser={setUser}
+            />
+          } />
           <Route exact path="/signuppage" element={<SignupPage />} />
         </Routes>
       </div>
