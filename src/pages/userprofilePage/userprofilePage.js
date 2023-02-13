@@ -32,9 +32,10 @@ export default function UserprofilePage() {
         <input placeholder= "current password" onChange={(event) => changehandler(event,setCurrentPassword,currentPassword)} />
         <input placeholder= "new password" onChange={(event) => changehandler(event,setNewPassword, newPassword)} />
         <button type="submit">Update password</button>
+        <br></br>
+        <button type="submit">Delete user</button>
       </form>
      
     </div>
   );
 }
-
