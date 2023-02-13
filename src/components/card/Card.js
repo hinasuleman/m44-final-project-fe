@@ -6,6 +6,7 @@ const Card = ({ book }) => {
     e.preventDefault();
     //below code needed to write to DB
     // const newBook = {
+    //   id: book.id,
     //   title: book.volumeInfo.title,
     //   author: book.volumeInfo.authors[0],
     //   isbn: book.volumeInfo.industryIdentifiers[0].identifier,
@@ -21,12 +22,12 @@ const Card = ({ book }) => {
   
   return (
     <div className="bookCard">
-      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
+      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
       <br></br>
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
       <button onClick={postToLibrary}>Add to Library</button>
-      <button onClick={console.log("add to wishlist")}>Add to Wishlist</button>
+      <button >Add to Wishlist</button>
     </div>
 
   );
@@ -36,4 +37,4 @@ export default Card;
 
 //{book.volumeInfo.imageLinks.thumbnail ? <img src={book.volumeInfo.imageLinks.thumbnail} alt=""/> : <p>No Image</p>}
 
-{/* <img src="../../images/blankCover.jpg" alt=""/> */}
+//<img src="../../images/blankCover.jpg" alt=""/>

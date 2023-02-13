@@ -1,13 +1,13 @@
 import React from "react";
-import Card from "../card/Card";
-import './CardContainer.css';
+import WishlistCard from "../wishlistCard/WishlistCard";
+import './WishlistContainer.css';
 
-const CardContainer = ({ books, fetchError }) => {
+const WishlistContainer = ({ books, fetchError }) => {
   if(!fetchError){
     return (
-      <div className="cardContainer">
+      <div className="WishlistContainer">
         {books.map((book, index) => (
-          <Card key={index} book={book} />
+          <WishlistCard key={index} book={book} />
         ))}
       </div>
     );
@@ -25,4 +25,4 @@ const ErrorInFetchBooks = () => {
   );
 }
 
-export default CardContainer;
+export default WishlistContainer;
