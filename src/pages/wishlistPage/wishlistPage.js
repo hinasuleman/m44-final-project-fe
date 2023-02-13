@@ -1,4 +1,4 @@
-import WishlistContainer from "../../components/WishlistContainer/WishlistContainer.";
+import WishlistContainer from "../../components/wishlistContainer/WishlistContainer";
 
 const WishlistPage = ({setBooks, fetchError, setFetchError, books, user}) => {
     return ( 

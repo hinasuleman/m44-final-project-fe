@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@900&display=swap");
+
+body {
+  background-image: url("/src/pages/landingPage/homeBookCase.png");
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+#emailBox {
+  background-color: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 400px;
+  height: 50px;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+#passwordBox {
+  background-color: none;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 400px;
+  height: 50px;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: static;
+}
+
+#loginBtn {
+  background-color: rgba(26, 46, 42, 1);
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 300px;
+  height: 50px;
+  color: antiquewhite;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+#signUpBtn {
+  background-color: rgba(26, 46, 42, 1);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 300px;
+  height: 50px;
+  color: antiquewhite;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 {
+  width: 600px;
+  height: 700px;
+  background-color: rgba(242, 239, 224, 0.66);
+  border: 1px solid black;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 65px;
+  text-align: center;
+}
+
+.box2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 575px;
+  height: 675px;
+  background-color: rgba(242, 239, 224, 1);
+  border: 1px solid black;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 65px;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.box3 {
+  position: absolute;
+  top: 150px;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.box4 {
+  position: absolute;
+  top: 200px;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.box5 {
+  position: absolute;
+  top: 230px;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  font-size: 15px;
+}

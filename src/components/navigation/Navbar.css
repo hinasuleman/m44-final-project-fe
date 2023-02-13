@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@100&display=swap");
+
+.NavbarItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 0 30px;
+    background-color: rgb(239, 233, 219, 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    width: 98%;
+    height: 80px;
+    border-radius: 12px;
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: "Outfit", sans-serif;
+    text-decoration: none !important;
+}
+
+.logo{
+    color: rgb(30, 30, 30, 100%);
+    justify-self: start;
+}
+
+.navMenu{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 3px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    text-decoration: none !important;
+}
+
+ .navMenu li{
+    text-decoration: none !important;
+    font-weight: 700;
+    color: rgb(30, 30, 30, 100%);
+    padding: 11px 16px;
+    white-space: nowrap;
+    border-radius: 12px;
+}
+
+.navMenu li:hover{
+    background: rgb(185, 177, 162);
+    transition:0.5s ease-in-out;
+}
+
+/* .navMenu li:visited{
+    color: rgb(30, 30, 30, 100%);
+} */
+
+/* .navMenu i{
+    padding-right: 11px;
+} */
