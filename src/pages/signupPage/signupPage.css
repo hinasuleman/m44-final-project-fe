@@ -36,23 +36,26 @@ body{
     
 }
 
-.signupContainer input{
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    width: 80%;
-    align-content: center;
-    border-radius: 7px;
+.signupContainer input, button{
+    margin: 3px 0px 3px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 30%);
+    border-radius: 7px;
+    padding: 8px;
+}
+
+.signupContainer input{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-content: center;
 }
 
 .signupContainer button{
     background-color: rgba(26, 46, 42, 1);
     color: rgb(249, 246, 240, 100%);
     width: 80%;
-    border-radius: 7px;
 }
 
 /* @import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@900&display=swap");
