@@ -44,11 +44,15 @@
     border-radius: 12px;
 }
 
-/* .navMenu i{
-    padding-right: 11px;
-} */
-
 .navMenu li:hover{
     background: rgb(185, 177, 162);
     transition:0.5s ease-in-out;
 }
+
+/* .navMenu li:visited{
+    color: rgb(30, 30, 30, 100%);
+} */
+
+/* .navMenu i{
+    padding-right: 11px;
+} */
