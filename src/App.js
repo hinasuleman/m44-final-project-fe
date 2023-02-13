@@ -10,7 +10,7 @@ import Navbar from './components/navigation/Navbar';
 function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
-  const [user, setUser] = useState([]);
+  const [user] = useState([]); //need to sort setUser
 
   return (
     <BrowserRouter>
