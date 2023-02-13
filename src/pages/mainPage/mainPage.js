@@ -1,5 +1,5 @@
 import CardContainer from "../../components/cardContainer/CardContainer";
-import LibraryContainer from "../../components/libraryContainer/LibraryContainer.";
+import LibraryContainer from "../../components/libraryContainer/LibraryContainer";
 import BookSearchModal from "../../components/modals/bookSearchModal/BookSearchModal";
 
 const MainPage = ({setBooks, fetchError, setFetchError, books, user}) => {
