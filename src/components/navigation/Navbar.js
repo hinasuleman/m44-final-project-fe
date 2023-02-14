@@ -14,7 +14,8 @@ function Navbar () {
 
         return(
             <div className="NavbarItems">
-                <NavLink to="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></NavLink>            
+                <NavLink to="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></NavLink>
+
                 <div className="navMenu">
                     <NavLink to="/mainpage"><img src={book} alt="My Library Icon" />My Library</NavLink>
                     
