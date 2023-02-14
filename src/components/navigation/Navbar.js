@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../../images/logo/logo_1.png";
 import "./Navbar.css";
 
 function Navbar () {
 
         return(
             <nav className="NavbarItems">
-                <h1 className="logo">BiblioTech</h1>                
+                <a href="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></a>            
                 <ul className="navMenu">
                     <li><NavLink to="/mainpage" activeClassName="active">My Library</NavLink></li>
                     
