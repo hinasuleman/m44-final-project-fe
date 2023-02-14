@@ -14,7 +14,7 @@ export default function LandingPage() {
         <input
           type="text"
           id="emailBox"
-          placeholder=" Input: Email"
+          placeholder=" Email"
           // onChange={(event) => setEmail(event.target.value)}
         />
         <br></br>
@@ -22,7 +22,7 @@ export default function LandingPage() {
         <input
           type="text"
           id="passwordBox"
-          placeholder=" Input: Password"
+          placeholder=" Password"
           // onChange={(event) => setPassword(event.target.value)}
         />
       </form>
@@ -31,7 +31,7 @@ export default function LandingPage() {
           Login
         </button>
         <button id="signUpBtn" onClick={handleLogin}>
-          Sign up!
+          Sign Up!
         </button>
       </div>
       <div className="box-container">
