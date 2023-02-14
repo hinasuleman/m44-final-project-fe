@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@700&display=swap");
 
 *{
     font-family: "Roboto", sans-serif;
@@ -8,8 +8,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    padding: 0px 30px;
+    font-size: 17px;
+    padding: 12px 0px 5px 0px;
     background-color: rgb(239, 233, 219, 100%);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     width: 98%;
@@ -22,9 +22,10 @@
 }
 
 .logoImg{
-    color: rgb(30, 30, 30, 100%);
-    justify-self: start;
-    height: 70px;
+    display: flex;
+    align-self: flex-start;
+    height: 300px;
+    margin: -120px;
 }
 
 .navMenu{
@@ -34,6 +35,7 @@
     list-style: none;
     align-items: center;
     justify-content: end;
+
 }
 
  .navMenu a{
@@ -50,7 +52,7 @@
 }
 
 .navMenu img{
-    height: 18px;
+    height: 17px;
     color: rgb(30, 30, 30, 100%);
     align-items: center;
     justify-content: center;
