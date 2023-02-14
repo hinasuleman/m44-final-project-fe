@@ -1,4 +1,5 @@
 import {useState} from "react";
+import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./signupPage.css";
 
 export default function SignupPage() {
@@ -10,18 +11,19 @@ export default function SignupPage() {
 
     function changehandler(event, setter, state) {
         setter(event.target.value)
-        console.log(state)
-        
+        console.log(state)        
     }
-
-
 
   function submitHandler(event) {
     event.preventDefault()
     console.log("signup functionality");
   }
+
   return (
     <div className="signupContainer">
+
+      <div className="logo"><img src={logo} alt="Logo" /></div>
+
       <form onSubmit={(event) => submitHandler(event)}>
         <input placeholder="First name" onChange={(event) => changehandler(event,setFirstName,firstName)} />
         <input placeholder= "Surname" onChange={(event) => changehandler(event,setSurname,surname)} />
