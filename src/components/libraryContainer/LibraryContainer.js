@@ -10,10 +10,10 @@ const LibraryContainer = ({ setBookList, bookList }) => {
   console.log("booklist: ",bookList);
     return (
       <div className="libraryCardContainer">
-        {/* {bookList[0].books.map((bookList, index) => (
+        {bookList[0].books.map((bookList, index) => (
           <LibraryCard key={index} bookList={bookList} 
           />
-        ))} */}
+        ))}
         <h1>this is a book!</h1>
       </div>
     );
