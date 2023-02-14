@@ -1,6 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../images/logo/logo_1.png";
+// import logo from "../../../src/images/logo/logo_outline.png";
+import book from "../../../src/images/icons/book.png";
+import heart from "../../../src/images/icons/heart.png";
+import user from "../../../src/images/icons/user.png";
+import peoplearrows from "../../../src/images/icons/people-arrows.png";
+import group from "../../../src/images/icons/people-group.png";
 import "./Navbar.css";
 
 
@@ -9,20 +14,20 @@ function Navbar () {
 
         return(
             <nav className="NavbarItems">
-                <NavLink to="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></NavLink>            
-                <ul className="navMenu">
-                    <li><NavLink to="/mainpage" activeClassName="active">My Library</NavLink></li>
+                {/* <NavLink to="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></NavLink>             */}
+                <div className="navMenu">
+                    <NavLink to="/mainpage"><img src={book} alt="My Library Icon" />My Library</NavLink>
                     
-                    <li><NavLink to="/wishlistpage" activeClassName="active">Wish List</NavLink></li>
+                    <NavLink to="/wishlistpage"><img src={heart} alt="Wishlist Icon" />Wish List</NavLink>
                     
-                    {/* <li><NavLink to="/" activeClassName="active">Share</NavLink></li> */}
-                    <li><p>Share</p></li>
+                    {/* <li><NavLink to="/"><img src={peoplearrows} alt="Share Icon" className="icon" activeClassName="active"/>Share</NavLink> */}
+                    {/* <img src={peoplearrows} alt="Share Books Icon" />Share</li> */}
                     
-                    {/* <li><NavLink to="/" activeClassName="active">Community</NavLink></li> */}
-                    <li><p>Community</p></li>
+                    {/* <li><NavLink to="/"><img src={group} alt="Community Icon" className="icon" activeClassName="active"/>Community</NavLink> */}
+                    {/* <img src={group} alt="Community Icon" />Community</li> */}
                     
-                    <li><NavLink to="/userprofilepage" activeClassName="active">Profile</NavLink></li>
-                </ul>
+                    <NavLink to="/userprofilepage"><img src={user} alt="Userprofile Icon" />Profile</NavLink>
+                </div>
             </nav>
     );
 }
