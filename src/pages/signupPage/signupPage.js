@@ -14,8 +14,6 @@ export default function SignupPage() {
         
     }
 
-
-
   function submitHandler(event) {
     event.preventDefault()
     console.log("signup functionality");

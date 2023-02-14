@@ -30,6 +30,7 @@ export default function LandingPage() {
         <button id="loginBtn" onClick={handleLogin}>
           Login
         </button>
+        {/* should this be handle signUp -loading sign up page */}
         <button id="signUpBtn" onClick={handleLogin}>
           Sign Up!
         </button>
