@@ -1,3 +1,5 @@
+import { readCookie, storeCookie } from "../common";
+
 export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError, fetchError) => {
   try {
     const res = await fetch(
@@ -66,6 +68,35 @@ export const postToWishlist = async (book,user) => {
               category: category,
               selflink: book.selfLink,
               publishDate: book.volumeInfo.publishedDate 
+          }
+          )
+      })
+      const data = await response.json();
+      console.log(data);
+  } catch (error) {
+      console.log(error)
+  };
+}
+
+export const deleteFromLibrary = async (book,user) => {
+  let cookie = readCookie("jwt_token")
+  try {
+    console.log(book.volumeInfo) 
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
+          method:"DELETE",
+          headers:{"Content-Type":"application/json",
+                  "Authorization":`Bearer ${cookie}`},
+          body: JSON.stringify({
+              user_ID: user.user_ID,
+              google_ID: book.id,
+              // title: book.volumeInfo.title,
+              // author: book.volumeInfo.authors[0],
+              // ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
+              // thumbnail: book.volumeInfo.imageLinks.thumbnail,
+              // description: book.volumeInfo.description,
+              // category: category,
+              // selflink: book.selfLink,
+              // publishDate: book.volumeInfo.publishedDate 
           }
           )
       })
