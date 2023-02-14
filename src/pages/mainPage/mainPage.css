@@ -1,7 +1,3 @@
-body {
-    background-color: rgb(249, 246, 240, 100%);
-}
-
 .booksearch {
     position: fixed;
     top: 0;
@@ -19,7 +15,6 @@ body {
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
 }
 
 
