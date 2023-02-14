@@ -6,6 +6,8 @@ import MainPage from "./pages/mainPage/mainPage";
 import SignupPage from "./pages/signupPage/signupPage";
 import UserprofilePage from "./pages/userprofilePage/userprofilePage";
 import Navbar from './components/navigation/Navbar';
+import Footer from './components/footer/Footer';
+import Footer from './components/footer';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -34,5 +36,13 @@ function App() {
     </BrowserRouter>
   );
 }
+
+function App() {
+  return (
+    <Footer />
+  );
+}
+
+
 
 export default App;
