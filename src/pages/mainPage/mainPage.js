@@ -6,7 +6,7 @@ import "./mainPage.css";
 
 const MainPage = ({ setBooks, fetchError, setFetchError, books, user }) => {
     const [showCardContainer, setShowCardContainer] = useState(false);
-    const [showBookSearchModal, setShowBookSearchModal] = useState(true);
+    const [showBookSearchModal, setShowBookSearchModal] = useState(false);
 
     const toggleSearchModal = () => {
         setShowBookSearchModal((prevState) => !prevState);
