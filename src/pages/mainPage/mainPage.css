@@ -1,5 +1,5 @@
-.mainpage {
-    border: 1px solid red;
+body {
+    background-color: rgb(249, 246, 240, 100%);
 }
 
 .booksearch {

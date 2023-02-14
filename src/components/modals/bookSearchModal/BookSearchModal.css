@@ -16,6 +16,7 @@
 }
 
 .searchform {
+    background-color: rgba(242, 239, 224, 1);
     position: absolute;
     top: 40%;
     left: 50%;
@@ -29,6 +30,7 @@
 }
 
 .searchh1 {
+    background-color: rgba(242, 239, 224, 1);
     margin-bottom: 100px;
     margin-top: 40%;
     font-size: 60px;
