@@ -3,7 +3,7 @@ import "./BookSearchModal.css";
 import { useState } from "react";
 import { fetchBooks } from "../../../utilities/utilities";
 
-function BookSearchModal({ setBooks, fetchError, setFetchError }) {
+function BookSearchModal({ setBooks, fetchError, setFetchError, onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("intitle");
 
@@ -11,7 +11,13 @@ function BookSearchModal({ setBooks, fetchError, setFetchError }) {
     e.preventDefault();
     const data = await fetchBooks(searchTerm, searchType, setBooks, setFetchError, fetchError);
     await setBooks(data.items);
+    console.log(handleSearch)
+    console.log('Search button clicked');
+    onSearch();
   };
+
+
+
 
   return (
     <>

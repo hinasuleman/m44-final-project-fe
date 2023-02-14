@@ -22,7 +22,7 @@ const Card = ({ book }) => {
 
   return (
     <div className="bookCard">
-      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} width="180px" height="200vh" alt="" /> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt="" />}
+      {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} height="200vh" alt="" /> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt="" />}
       <br></br>
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>

@@ -17,5 +17,17 @@
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 10px;
+}
+
+.searchagain {
+    display: flex;
+    justify-content: center;
+    border: 1px solid lime;
+    margin-top: 100px;
+    width: auto;
+}
+
+.searchbtn {
+    width: 150px;
 }
