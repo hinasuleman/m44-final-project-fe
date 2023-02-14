@@ -1,7 +1,7 @@
 .cardContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 50vh;
-
+    height: 100%;
 }
