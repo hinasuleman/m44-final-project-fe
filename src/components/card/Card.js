@@ -1,14 +1,20 @@
 import React from "react";
-import { postToLibrary } from "../../utilities/utilities";
+import { postToLibrary, postToWishlist } from "../../utilities/utilities";
 import './Card.css';
 
 const Card = ({ book }) => {
   const submitHandler1 = () => {
     // e.preventDefault();
     const user = {user_ID:2};
-    console.log("click")
     postToLibrary(book,user);
     console.log("book added to library");
+  };
+
+  const submitHandler2 = () => {
+    // e.preventDefault();
+    const user = {user_ID:2};
+    postToWishlist(book,user);
+    console.log("book added to Wishlist");
   };
 
   return (
@@ -19,7 +25,7 @@ const Card = ({ book }) => {
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.authors}</p>
       <button onClick={() => (submitHandler1())}>Add to Library</button>
-      <button >Add to Wishlist</button>
+      <button onClick={() => (submitHandler2())}>Add to Wishlist</button>
     </div>
 
   );

@@ -43,3 +43,35 @@ export const postToLibrary = async (book,user) => {
       console.log(error)
   };
 }
+export const postToWishlist = async (book,user) => {
+  try {
+    console.log(book.volumeInfo)
+    const blankImage = require("../images/blankCover.jpg");
+    let category  = "No Category Information";
+    console.log(category);
+    if (!book.volumeInfo.description == null) {book.volumeInfo.description = "No Description Information"};  
+    if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
+    if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
+          method:"POST",
+          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          body: JSON.stringify({
+              user_ID: user.user_ID,
+              google_ID: book.id,
+              title: book.volumeInfo.title,
+              author: book.volumeInfo.authors[0],
+              ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
+              thumbnail: book.volumeInfo.imageLinks.thumbnail,
+              description: book.volumeInfo.description,
+              category: category,
+              selflink: book.selfLink,
+              publishDate: book.volumeInfo.publishedDate 
+          }
+          )
+      })
+      const data = await response.json();
+      console.log(data);
+  } catch (error) {
+      console.log(error)
+  };
+}
