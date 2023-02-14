@@ -3,7 +3,7 @@ import "./BookSearchModal.css";
 import { useState } from "react";
 import { fetchBooks } from "../../../utilities/utilities";
 
-function BookSearchModal({setBooks, fetchError, setFetchError }) {
+function BookSearchModal({ setBooks, fetchError, setFetchError, onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("intitle");
 
@@ -11,25 +11,37 @@ function BookSearchModal({setBooks, fetchError, setFetchError }) {
     e.preventDefault();
     const data = await fetchBooks(searchTerm, searchType, setBooks, setFetchError, fetchError);
     await setBooks(data.items);
+    console.log(handleSearch)
+    console.log('Search button clicked');
+    onSearch();
   };
 
+
+
+
   return (
-    <form onSubmit={handleSearch}>
-      <input
-        type="text"
-        value={searchTerm}
-        placeholder="enter book title, author or ISBN number..."
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <br></br>
-      <select value={searchType} onChange={(e) => setSearchType(e.target.value)}>
-        <option value="intitle">Title</option>
-        <option value="inauthor">Author</option>
-        <option value="isbn">ISBN</option>
-      </select>
-      <br></br>
-      <button type="submit">Search</button>
-    </form>
+    <>
+      <div className="searchbox">
+        <form className="searchform" onSubmit={handleSearch}>
+          <h1 className="searchh1">Search</h1>
+          <input
+            className="searchinput"
+            type="text"
+            value={searchTerm}
+            placeholder="Enter book title, author or ISBN no."
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+
+          <select value={searchType} onChange={(e) => setSearchType(e.target.value)}>
+            <option value="intitle">Title</option>
+            <option value="inauthor">Author</option>
+            <option value="isbn">ISBN</option>
+          </select>
+
+          <button className="submitbtn" type="submit">Search</button>
+        </form>
+      </div>
+    </>
   );
 }
 
