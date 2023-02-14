@@ -26,7 +26,7 @@ export default function LandingPage() {
           // onChange={(event) => setPassword(event.target.value)}
         />
       </form>
-      <div class="button-container">
+      <div className="button-container">
         <button id="loginBtn" onClick={handleLogin}>
           Login
         </button>

@@ -12,6 +12,7 @@ function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
   const [user] = useState([]); //need to sort setUser
+  const [bookList, setBookList] = useState([]);
 
   return (
     <BrowserRouter>
@@ -22,6 +23,8 @@ function App() {
             <Route exact path="/mainpage" element={
                   <MainPage 
                     setBooks={setBooks}
+                    setBookList={setBookList}
+                    bookList={bookList}
                     fetchError={fetchError}
                     setFetchError={setFetchError}
                     books={books}

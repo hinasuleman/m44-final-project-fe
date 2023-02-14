@@ -1,4 +1,4 @@
-import { readCookie, storeCookie } from "../common";
+import { readCookie } from "../common";
 
 export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError, fetchError) => {
   try {
@@ -105,4 +105,24 @@ export const deleteFromLibrary = async (book,user) => {
   } catch (error) {
       console.log(error)
   };
+}
+
+export const listBooks = async (setBookList, bookList) => {
+  // let cookie = readCookie("jwt_token")
+  let cookie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lEIjoyLCJpYXQiOjE2NzYzODc5Mjh9.MujBAdpbOJpGCQjr_-VSwVnBuFV5R0otwHW8oFYbx1U"
+  try {
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}listBooks`,{
+        method: "GET",
+        headers:{"Content-Type":"application/json",
+                "Authorization":`Bearer ${cookie}`}        
+                }
+    )
+    const data = await response.json();
+    console.log("data: ",data);
+    await setBookList(data);
+    console.log("listBooks (fn):", bookList);
+    return data;
+  } catch (error) {
+    console.log(error)    
+  }
 }
