@@ -17,9 +17,9 @@ export const postToLibrary = async (book,user) => {
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
     console.log(category);
-    if (!book.volumeInfo.description) {book.volumeInfo.description = "No Description Information"};  
-    if (!book.volumeInfo.publishedDate) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
-    if (!book.volumeInfo.imageLinks.thumbnail) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
+    if (!book.volumeInfo.description == null) {book.volumeInfo.description = "No Description Information"};  
+    if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
+    if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addBook`, {
           method:"POST",
           headers: {"Content-Type" : "application/json"}, //token not need at the moment
@@ -28,12 +28,12 @@ export const postToLibrary = async (book,user) => {
               google_ID: book.id,
               title: book.volumeInfo.title,
               author: book.volumeInfo.authors[0],
-              isbn: book.volumeInfo.industryIdentifiers[0].identifier,
+              ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
               thumbnail: book.volumeInfo.imageLinks.thumbnail,
               description: book.volumeInfo.description,
               category: category,
-              selfLink: book.selfLink,
-              publishedDate: book.volumeInfo.publishedDate 
+              selflink: book.selfLink,
+              publishDate: book.volumeInfo.publishedDate 
           }
           )
       })
@@ -41,5 +41,5 @@ export const postToLibrary = async (book,user) => {
       console.log(data);
   } catch (error) {
       console.log(error)
-  }
+  };
 }
