@@ -1,0 +1,33 @@
+.mainpage {
+    border: 1px solid red;
+    background-color: rgb(249, 246, 240, 100%);
+    height: 100%;
+}
+
+.booksearch {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.cardcontainer {
+    border: 1px solid green;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.searchagain {
+    display: flex;
+    justify-content: center;
+    border: 1px solid lime;
+    margin-top: 100px;
+    width: auto;
+}
+
+.searchbtn {
+    width: 150px;
+}

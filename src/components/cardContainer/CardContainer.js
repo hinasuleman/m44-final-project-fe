@@ -3,7 +3,7 @@ import Card from "../card/Card";
 import './CardContainer.css';
 
 const CardContainer = ({ books, fetchError }) => {
-  if(!fetchError){
+  if (!fetchError) {
     return (
       <div className="cardContainer">
         {books.map((book, index) => (
@@ -18,7 +18,7 @@ const CardContainer = ({ books, fetchError }) => {
 
 
 const ErrorInFetchBooks = () => {
-  return(
+  return (
     <div>
       <h1>Error in Fetch Request</h1>
     </div>
