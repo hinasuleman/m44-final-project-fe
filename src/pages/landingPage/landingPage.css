@@ -161,7 +161,8 @@ body {
   text-align: center;
   font-size: 18px;
 }
-*/ .box5 {
+
+.box5 {
   position: fixed;
   top: -76px;
   width: 250px;
