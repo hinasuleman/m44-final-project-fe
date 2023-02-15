@@ -1,8 +1,10 @@
 import {useState} from "react";
 import "./signupPage.css";
 import { addUser } from "../../utilities/utilities";
+import { useNavigate  } from 'react-router-dom';
 
 export default function SignupPage(setter) {
+  const navigate = useNavigate();
     const [firstName, setFirstName] = useState("")
     const [surname, setSurname] = useState("")
     const [userName, setUserName] = useState("")
@@ -15,13 +17,16 @@ export default function SignupPage(setter) {
         console.log(state)
         
     }
-
+ 
 
 
     async function submitHandler(event) {
     event.preventDefault()
     console.log("signup functionality",firstName,surname, email,password);
-    await addUser(firstName,surname, email,userName,password, setter);
+    const userInfo= await addUser(firstName,surname, email,userName,password, setter);
+    if (userInfo != null){
+      navigate ("/mainpage");
+    }
       //check if email is wrtten correctly before submit
       //test add user addUser(firstName,surname, email,password,setter);
       if (email !== confirmEmail){

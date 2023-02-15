@@ -29,7 +29,7 @@ export default function LandingPage(setter) {
        const userInfo= await login(email,password,setter);
        navigate ("/mainpage");
        //if query succeful move to main
-  if (userInfo ){
+  if (userInfo != null){
     navigate ("/mainpage");
   }
 
