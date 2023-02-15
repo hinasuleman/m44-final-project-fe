@@ -28,10 +28,11 @@ export const login = async (email,password,setter,cookie) => {
       })
       const data = await response.json();
       console.log(data);//print all respons data
-      console.log(data.user);//print user
+      console.log(data.user);//print user info
       setter(data.user);//setUser to the logged in user
 //store token in cookie
       storeCookie("jwt_token",data.token,7);
+      
   } catch (error) {
       console.log(error)
   }
@@ -40,17 +41,19 @@ export const login = async (email,password,setter,cookie) => {
 //also retuen a token and all user data including user_ID
 //user_ID is not sent but auto created on insertion into the table by increament integer 
 //the return TOKEN will have the ID encrypted inside it and can be obtained by readCookie(token)
-export const addUser = async (firstName,surname, email,password,setter,cookie) => {
+export const addUser = async (firstName,surname, email,userName,password,setter,cookie) => {
   try {
-    //concat the names
-    const newUserName= `${firstName} ${surname}`;
+    //optional userName to test mySQL DB which have it as a coloumn
+    //const newUserName= "abcd";
     //response shouls have user object and token
+    console.log("post functionality",firstName,surname,userName, email,password);
       const response = await fetch("https://m44-final-project-be.onrender.com/addUser", {
           method:"POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
-            
-              userName : newUserName,
+            firstName: firstName,
+            surname: surname,
+              userName : userName,
               email: email,
               password: password
           }
@@ -71,7 +74,7 @@ export const addUser = async (firstName,surname, email,password,setter,cookie) =
 
 export const addBook = async (newBook,setter,cookie) => {
   try {
-     const response = await fetch("https://bibliotech.onrender.com/addBook", {
+     const response = await fetch("https://m44-final-project-be.onrender.com/addBook", {
           method:"POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
