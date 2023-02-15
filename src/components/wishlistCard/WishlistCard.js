@@ -12,7 +12,7 @@ const WishlistCard = ({ bookItem }) => {
       {bookItem.thumbnail ? <img src={bookItem.thumbnail} height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
       <br></br>
       <p className="title">{bookItem.title}</p>
-      <p className="author">{bookItem.authors}</p>
+      <p className="author">{bookItem.author}</p>
       <button >Remove from Wishlist</button>
       <button >Add to Library</button>
     </div>
