@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./landingPage.css";
 
 export default function LandingPage() {
@@ -35,11 +36,11 @@ export default function LandingPage() {
         </button>
       </div>
       <div className="box-container">
-        <div className="box1">Box 1</div>
-        <div className="box2">BiblioTech</div>
+        <div className="box1">Box 1</div>        
+        <div className="box2"><img src={logo} alt="Logo" /></div>
         <div className="box3">Welcome!</div>
-        <div className="box4">Everyones favourite BookClub.</div>
-        <div className="box5">Sign up for free to get started.</div>
+        {/* <div className="box4">Everyones favourite BookClub.</div> */}
+        <div className="box5">Login or sign up to get started</div>
       </div>
     </div>
   );
