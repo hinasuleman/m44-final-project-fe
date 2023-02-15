@@ -9,7 +9,7 @@ export const storeCookie = (key, value, days) => {
     let cookie = document.cookie = key + "=" + value + "; expires=" +expiryDate.toGMTString() + "; path=/";
     console.log(cookie);
     return cookie;
-}
+};
 
 export const readCookie = (cookieKey) => {
     const result = new RegExp(`(?<=${cookieKey}=)[^;]*`);
@@ -22,8 +22,5 @@ export const readCookie = (cookieKey) => {
         console.log("cookie not found")
         return false
     }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
+};
+

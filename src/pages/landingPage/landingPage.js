@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./landingPage.css";
 import { useNavigate  } from 'react-router-dom';
-import { login } from "../../utilities/utilities";
+import { login } from "../../utilities/userfunctions";
 
 
 
@@ -37,31 +37,26 @@ export default function LandingPage(setter) {
   }
   return (
     <div>
-      {" "}
-      {/* <form onSubmit={submitHandler}> */}
-      <form>
-        {/* <label for="Input"></label> */}
-        <input
-          type="text"
-          id="emailBox"
-          placeholder=" Email"
-          // onChange={(event) => setEmail(event.target.value)}
-        />
-        <br></br>
-        {/* <label for="Input"></label> */}
-        <input
-          type="password"
-          id="passwordBox"
-          placeholder=" Password"
-          // onChange={(event) => setPassword(event.target.value)}
-        />
-<<<<<<< HEAD
-      </form>
+
+        <form>
+          <input
+            type="text"
+            id="emailBox"
+            placeholder=" Email"
+            // onChange={(event) => setEmail(event.target.value)} 
+            />
+          <br></br>
+
+          <input
+            type="password"
+            id="passwordBox"
+            placeholder=" Password"
+            // onChange={(event) => setPassword(event.target.value)} 
+            />
+
+          <br></br>
+
       <div className="button-container">
-=======
-      
-      <div class="button-container">
->>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
         <button id="loginBtn" onClick={handleLogin}>
           Login
         </button>
@@ -69,12 +64,13 @@ export default function LandingPage(setter) {
           Sign Up!
         </button>
       </div>
-      </form>
-      <div className="box-container">
-        <div className="box1">Box 1</div>        
+
+    </form>
+    <div className="box-container">
+        <div className="box1">Box 1</div>
         <div className="box2"><img src={logo} alt="Logo" /></div>
         <div className="box3">Welcome!</div>
-        {/* <div className="box4">Everyones favourite BookClub.</div> */}
+        <div className="box4">Everyones favourite BookClub.</div>
         <div className="box5">Login or sign up to get started</div>
       </div>
     </div>

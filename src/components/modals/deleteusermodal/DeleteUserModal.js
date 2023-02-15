@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import './DeleteUserModal.css'
-import { deleteUser } from "../../../utilities/utilities";
+import { deleteUser } from "../../../utilities/userfunctions";
 
 const DeleteUserModal = () => {
   const [currentEmail, setCurrentEmail] = useState("")
