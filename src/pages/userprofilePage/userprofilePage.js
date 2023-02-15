@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./userprofilePage.css";
+import DeleteUserModal from '../../components/modals/deleteusermodal/DeleteUserModal'
 
 export default function UserprofilePage() {
   const [currentEmail, setCurrentEmail] = useState("")
@@ -20,8 +21,10 @@ export default function UserprofilePage() {
     event.preventDefault()
     console.log("userprofile functionality");
   }
+
   return (
     <div className="userprofile">
+
       {/* imagetag */}
       <form onSubmit={(event) => submitHandler1(event)}>
         <input placeholder="current email" onChange={(event) => changehandler(event, setCurrentEmail, currentEmail)} />
@@ -33,9 +36,15 @@ export default function UserprofilePage() {
         <input placeholder="new password" onChange={(event) => changehandler(event, setNewPassword, newPassword)} />
         <button type="submit">Update password</button>
         <br></br>
-        <button type="submit">Delete user</button>
+        <div>
+          <button type="submit" onClick={toggleDeleteModal}>Delete user</button>
+        </div>
       </form>
-
+      <div>
+        {showDeleteUserModal && <DeleteUserModal />}
+      </div>
     </div>
   );
 }
+
+export default UserprofilePage;
