@@ -15,18 +15,16 @@ export default function SignupPage(setter) {
     function changehandler(event, setter, state) {
         setter(event.target.value)
         console.log(state)
-        
-    }
  
-
+    }
 
     async function submitHandler(event) {
     event.preventDefault()
     console.log("signup functionality",firstName,surname, email,password);
     const userInfo= await addUser(firstName,surname, email,userName,password, setter);
-    if (userInfo != null){
+    ///if (userInfo != null){
       navigate ("/mainpage");
-    }
+    //}
       //check if email is wrtten correctly before submit
       //test add user addUser(firstName,surname, email,password,setter);
       if (email !== confirmEmail){
@@ -67,4 +65,3 @@ export default function SignupPage(setter) {
     </div>
   );
 }
-
