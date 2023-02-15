@@ -1,7 +1,7 @@
 import {useState} from "react";
 import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./signupPage.css";
-import { addUser } from "../../utilities/utilities";
+import { addUser } from "../../utilities/userfunctions";
 import { useNavigate  } from 'react-router-dom';
 
 export default function SignupPage(setter) {
@@ -15,16 +15,6 @@ export default function SignupPage(setter) {
     
     function changehandler(event, setter, state) {
         setter(event.target.value)
-<<<<<<< HEAD
-        console.log(state)        
-    }
-
-  function submitHandler(event) {
-    event.preventDefault()
-    console.log("signup functionality");
-  }
-
-=======
         console.log(state)
  
     }
@@ -33,6 +23,7 @@ export default function SignupPage(setter) {
     event.preventDefault()
     console.log("signup functionality",firstName,surname, email,password);
     const userInfo= await addUser(firstName,surname, email,userName,password, setter);
+    console.log(userInfo);
     ///if (userInfo != null){
       navigate ("/mainpage");
     //}
@@ -55,14 +46,8 @@ export default function SignupPage(setter) {
           // console.log (data.user);
           // setter (data.user);
       } 
-         
-          
-      
-      
-      
     }
   
->>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
   return (
     <div className="signupContainer">
 

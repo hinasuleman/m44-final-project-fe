@@ -2,11 +2,16 @@ import { useState } from "react";
 import "./userprofilePage.css";
 import DeleteUserModal from '../../components/modals/deleteusermodal/DeleteUserModal'
 
-export default function UserprofilePage() {
+  function UserprofilePage() {
   const [currentEmail, setCurrentEmail] = useState("")
   const [newEmail, setNewEmail] = useState("")
   const [currentPassword, setCurrentPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
+  const [showDeleteUserModal, setDeleteUserModal] = useState(false)
+
+  const toggleDeleteModal = () => {
+    setDeleteUserModal(true);
+  }
 
   function changehandler(event, setter, state) {
     setter(event.target.value)
@@ -24,8 +29,6 @@ export default function UserprofilePage() {
 
   return (
     <div className="userprofile">
-
-      {/* imagetag */}
       <form onSubmit={(event) => submitHandler1(event)}>
         <input placeholder="current email" onChange={(event) => changehandler(event, setCurrentEmail, currentEmail)} />
         <input placeholder="new email" onChange={(event) => changehandler(event, setNewEmail, newEmail)} />
@@ -48,3 +51,4 @@ export default function UserprofilePage() {
 }
 
 export default UserprofilePage;
+
