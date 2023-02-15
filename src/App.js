@@ -18,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar/>
+      <Navbar setUser={setUser}/>
         <div>
           <Routes>
             <Route exact path="/" element={<LandingPage setter={setUser}/>} />
