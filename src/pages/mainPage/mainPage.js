@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import CardContainer from "../../components/cardContainer/CardContainer";
 import BookSearchModal from "../../components/modals/bookSearchModal/BookSearchModal";
+import LibraryContainer from "../../components/libraryContainer/LibraryContainer";
 import "./mainPage.css";
 
-const MainPage = ({ setBooks, fetchError, setFetchError, books, user }) => {
+const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, books, user }) => {
     const [showCardContainer, setShowCardContainer] = useState(false);
-    const [showBookSearchModal, setShowBookSearchModal] = useState(true);
+    const [showBookSearchModal, setShowBookSearchModal] = useState(false);
 
     const toggleSearchModal = () => {
         setShowBookSearchModal((prevState) => !prevState);
@@ -30,6 +31,14 @@ const MainPage = ({ setBooks, fetchError, setFetchError, books, user }) => {
                     </div>
                 )}
 
+                <LibraryContainer 
+                    setBooks={setBooks}
+                    setBookList={setBookList}
+                    bookList={bookList}
+                    fetchError={fetchError}
+                    setFetchError={setFetchError}
+                    user={user}
+                />
 
                 {showCardContainer && (
                     <div className="cardcontainer">
@@ -50,3 +59,5 @@ const MainPage = ({ setBooks, fetchError, setFetchError, books, user }) => {
 };
 
 export default MainPage;
+
+

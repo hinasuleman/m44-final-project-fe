@@ -1,3 +1,30 @@
 .wishlistMain {
+    /* background-color: rgb(249, 246, 240, 100%); */
+}
+
+body {
     background-color: rgb(249, 246, 240, 100%);
+}
+
+.wishListContainer {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    
+}
+
+.searchbtn {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    background-color: rgba(239, 233, 219, 100%);
+    border: none;
+}
+
+.plus {
+    margin-top: -5px;
+    color: black;
+    font-size: 60px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }

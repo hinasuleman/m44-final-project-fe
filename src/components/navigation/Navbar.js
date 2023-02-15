@@ -18,8 +18,12 @@ function Navbar () {
 
                 <div className="navMenu">
                     <NavLink to="/mainpage"><img src={book} alt="My Library Icon" />My Library</NavLink>
-                    
+
                     <NavLink to="/wishlistpage"><img src={heart} alt="Wishlist Icon" />Wish List</NavLink>
+<<<<<<< HEAD
+                        <li><img src={peoplearrows} alt="Share Books Icon" />Share</li>
+                        <li><img src={group} alt="Community Icon" />Community</li>
+=======
                     
                     {/* <li><NavLink to="/"><img src={peoplearrows} alt="Share Icon" />Share</NavLink> */}
                     <li><img src={peoplearrows} alt="Share Books Icon" />Share</li>
@@ -27,6 +31,7 @@ function Navbar () {
                     {/* <li><NavLink to="/"><img src={group} alt="Community Icon" />Community</NavLink> */}
                     <li><img src={group} alt="Community Icon" />Community</li>
                     
+>>>>>>> b18b75c6877b17a98c43f3bc2f15f9046827eaa2
                     <NavLink to="/userprofilepage"><img src={user} alt="Userprofile Icon" />Profile</NavLink>
                 </div>
             </div>
