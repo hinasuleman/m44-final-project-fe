@@ -15,12 +15,6 @@ const DeleteUserModal = () => {
   deleteUser(userName,currentEmail,password)
   }
 
-
-  function changehandler(event, setter, state) {
-    setter(event.target.value)
-    console.log(state)
-  }
-
   function submitHandler1(event) {
     event.preventDefault()
     console.log("deleteuser functionality");
