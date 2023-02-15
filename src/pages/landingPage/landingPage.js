@@ -14,22 +14,24 @@ export default function LandingPage(setter) {
   }
   //handle login intitate TOKEN and store User information
   
-    const handleLogin = async (event) => {
+    const handleLogin = async (e) => {
     console.log("login functionality");
     
-    // const [username,setUsername] =useState();
-    // const [email,setEmail] =useState();
-    // const [password,setPassword] =useState();
+    e.preventDefault ();
+   
     const email = document.getElementById('emailBox').value;
     const password = document.getElementById('passwordBox').value;
 
     
-        event.preventDefault();
+        e.preventDefault();
         console.log("executing login request")
         //log in + set TOKEN + setUser via setter
        const userInfo= await login(email,password,setter);
-    
-  
+       navigate ("/mainpage");
+       //if query succeful move to main
+  if (userInfo ){
+    navigate ("/mainpage");
+  }
 
   }
   return (
