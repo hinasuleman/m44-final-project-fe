@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { listBooks } from "../src/utilities/utilities";
 import './App.css';
 import LandingPage from "./pages/landingPage/landingPage";
 import MainPage from "./pages/mainPage/mainPage";
-
 import SignupPage from "./pages/signupPage/signupPage";
 import UserprofilePage from "./pages/userprofilePage/userprofilePage";
 import Navbar from './components/navigation/Navbar';
@@ -12,7 +12,7 @@ function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
   const [user] = useState([]); //need to sort setUser
-  const [bookList, setBookList] = useState([]);
+  const [bookList, setBookList] = useState(listBooks());
 
   return (
     <BrowserRouter>
