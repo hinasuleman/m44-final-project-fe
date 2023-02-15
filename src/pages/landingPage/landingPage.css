@@ -13,7 +13,7 @@ body {
 #emailBox {
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
-  top: 49%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -34,7 +34,7 @@ body {
 #passwordBox {
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
-  top: 57%;
+  top: 64%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -65,14 +65,14 @@ body {
 #loginBtn {
   background-color: rgba(26, 46, 42, 1);
   position: absolute;
-  top: 67%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 250px;
+  width: 240px;
   height: 50px;
   color: rgb(249, 246, 240, 100%);
   border-radius: 7px;
@@ -87,14 +87,14 @@ body {
 #signUpBtn {
   background-color: rgba(26, 46, 42, 1);
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 250px;
+  width: 240px;
   height: 50px;
   color: rgb(249, 246, 240, 100%);
   border-radius: 7px;
@@ -145,9 +145,9 @@ body {
 
 .box3 {
   position: fixed;
-  top: -159px;
-  width: 300px;
+  top: -46px;
   height: 60px;
+  left: -48px;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
@@ -155,18 +155,9 @@ body {
 
 .box4 {
   position: fixed;
-  top: -112px;
+  top: -11px;
+  left: -127px;
   width: 250px;
-  height: 60px;
   text-align: center;
-  font-size: 18px;
-}
-
-.box5 {
-  position: fixed;
-  top: -76px;
-  width: 250px;
-  height: 60px;
-  text-align: center;
-  font-size: 18px;
+  font-size: 15px;
 }
