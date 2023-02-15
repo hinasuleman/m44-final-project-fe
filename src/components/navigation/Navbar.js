@@ -19,35 +19,35 @@ const handleClick = () => {
 
         return(
             <div className="navbarItems">
-                <NavLink to="/mainpage"><img src={logo} className="logoImg" /></NavLink>
+                <NavLink to="/mainpage"><img src={logo} alt="" className="logoImg" /></NavLink>
 
                 <div className="navMenu">
-                    <NavLink to="/mainpage"><img src={book} />My Library</NavLink>
+                    <NavLink to="/mainpage"><img src={book} alt=""/>My Library</NavLink>
 
-                    <NavLink to="/wishlistpage"><img src={heart} />Wish List</NavLink>
+                    <NavLink to="/wishlistpage"><img src={heart} alt="" />Wish List</NavLink>
                     
-                    <NavLink to="/"><img src={peoplearrows} />Share</NavLink>
+                    <NavLink to="/"><img src={peoplearrows} alt="" />Share</NavLink>
                     
-                    <NavLink to="/"><img src={group} />Community</NavLink>
+                    <NavLink to="/"><img src={group} alt="" />Community</NavLink>
                     
-                    <NavLink to="/userprofilepage"><img src={user} />Profile</NavLink>
+                    <NavLink to="/userprofilepage"><img src={user} alt="" />Profile</NavLink>
 
-                    <button type="button" onClick= {handleClick} ><img src={logoutImg} />Log Out</button>
+                    <button type="button" onClick= {handleClick} ><img src={logoutImg} alt="" />Log Out</button>
                 </div>
 
                 <div className="navbarItemsSmall">
                 
-                    <NavLink to="/mainpage"><img src={book}  /></NavLink>
+                    <NavLink to="/mainpage"><img src={book} alt="" /></NavLink>
 
-                    <NavLink to="/wishlistpage"><img src={heart}  /></NavLink>
+                    <NavLink to="/wishlistpage"><img src={heart} alt="" /></NavLink>
                                 
-                    <NavLink to="/"><img src={peoplearrows} /></NavLink>
+                    <NavLink to="/"><img src={peoplearrows} alt="" /></NavLink>
                                 
-                    <NavLink to="/"><img src={group} /></NavLink>
+                    <NavLink to="/"><img src={group} alt="" /></NavLink>
                                 
-                    <NavLink to="/userprofilepage"><img src={user} /></NavLink>
+                    <NavLink to="/userprofilepage"><img src={user} alt="" /></NavLink>
 
-                    <button type="button" onClick= {handleClick} ><img src={logoutImg} /></button>
+                    <button type="button" onClick= {handleClick} ><img src={logoutImg} alt="" /></button>
                 </div>
 
                 </div>
