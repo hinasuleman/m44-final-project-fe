@@ -1,13 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@900&display=swap");
 
 body {
-  background-image: url("/src/pages/landingPage/homeBookCase.png");
+  background-image: url("../../images/homeBookCase.jpeg");
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: rgb(249, 246, 240, 100%);
   font-family: "Roboto", sans-serif;
 }
 
 #emailBox {
-  background-color: none;
+  background-color: rgb(255, 255, 255, 100%);
   position: absolute;
   top: 49%;
   left: 50%;
@@ -16,15 +20,19 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 400px;
+  width: 350px;
   height: 50px;
-  border-radius: 9px;
-  font-size: 24px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
 }
 
 #passwordBox {
-  background-color: none;
+  background-color: rgb(255, 255, 255, 100%);
   position: absolute;
   top: 57%;
   left: 50%;
@@ -33,10 +41,14 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 400px;
+  width: 350px;
   height: 50px;
-  border-radius: 9px;
-  font-size: 24px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -60,12 +72,16 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 300px;
+  width: 250px;
   height: 50px;
-  color: antiquewhite;
-  border-radius: 9px;
-  font-size: 24px;
+  color: rgb(249, 246, 240, 100%);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 100%);
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 #signUpBtn {
@@ -78,12 +94,16 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 300px;
+  width: 250px;
   height: 50px;
-  color: antiquewhite;
-  border-radius: 9px;
-  font-size: 24px;
+  color: rgb(249, 246, 240, 100%);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 100%);
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .box-container {
@@ -118,13 +138,18 @@ body {
   font-weight: 900;
 }
 
+.box2 img {
+  height: 250px;
+  position: center;
+}
+
 .box3 {
   position: fixed;
   top: -159px;
   width: 300px;
   height: 60px;
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -136,12 +161,11 @@ body {
   text-align: center;
   font-size: 18px;
 }
-
-.box5 {
+*/ .box5 {
   position: fixed;
   top: -76px;
   width: 250px;
   height: 60px;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
 }

@@ -22,4 +22,8 @@ export const readCookie = (cookieKey) => {
         console.log("cookie not found")
         return false
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a

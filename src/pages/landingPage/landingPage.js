@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./landingPage.css";
 import { useNavigate  } from 'react-router-dom';
 import { login } from "../../utilities/utilities";
@@ -54,8 +55,13 @@ export default function LandingPage(setter) {
           placeholder=" Password"
           // onChange={(event) => setPassword(event.target.value)}
         />
+<<<<<<< HEAD
+      </form>
+      <div className="button-container">
+=======
       
       <div class="button-container">
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
         <button id="loginBtn" onClick={handleLogin}>
           Login
         </button>
@@ -65,11 +71,11 @@ export default function LandingPage(setter) {
       </div>
       </form>
       <div className="box-container">
-        <div className="box1">Box 1</div>
-        <div className="box2">BiblioTech</div>
+        <div className="box1">Box 1</div>        
+        <div className="box2"><img src={logo} alt="Logo" /></div>
         <div className="box3">Welcome!</div>
-        <div className="box4">Everyones favourite BookClub.</div>
-        <div className="box5">Sign up for free to get started.</div>
+        {/* <div className="box4">Everyones favourite BookClub.</div> */}
+        <div className="box5">Login or sign up to get started</div>
       </div>
     </div>
   );

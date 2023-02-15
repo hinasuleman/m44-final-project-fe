@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { readCookie } from "../common";
+=======
 import {storeCookie, readCookie} from "../common/";
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
 
 export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError, fetchError) => {
   try {
@@ -13,6 +17,31 @@ export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError
   
 };
 
+<<<<<<< HEAD
+export const postToLibrary = async (book,user) => {
+  try {
+    console.log(book.volumeInfo)
+    const blankImage = require("../images/blankCover.jpg");
+    let category  = "No Category Information";
+    console.log(category);
+    if (!book.volumeInfo.description == null) {book.volumeInfo.description = "No Description Information"};  
+    if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
+    if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addBook`, {
+          method:"POST",
+          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          body: JSON.stringify({
+              user_ID: user.user_ID,
+              google_ID: book.id,
+              title: book.volumeInfo.title,
+              author: book.volumeInfo.authors[0],
+              ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
+              thumbnail: book.volumeInfo.imageLinks.thumbnail,
+              description: book.volumeInfo.description,
+              category: category,
+              selflink: book.selfLink,
+              publishDate: book.volumeInfo.publishedDate 
+=======
 // Login
 export const login = async (email,password,setter,cookie) => {
   try {
@@ -23,10 +52,41 @@ export const login = async (email,password,setter,cookie) => {
           body: JSON.stringify({
               userName: email,
               password: password
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
           }
           )
       })
       const data = await response.json();
+<<<<<<< HEAD
+      console.log(data);
+  } catch (error) {
+      console.log(error)
+  };
+}
+export const postToWishlist = async (book,user) => {
+  try {
+    console.log(book.volumeInfo)
+    const blankImage = require("../images/blankCover.jpg");
+    let category  = "No Category Information";
+    console.log(category);
+    if (!book.volumeInfo.description == null) {book.volumeInfo.description = "No Description Information"};  
+    if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
+    if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
+          method:"POST",
+          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          body: JSON.stringify({
+              user_ID: user.user_ID,
+              google_ID: book.id,
+              title: book.volumeInfo.title,
+              author: book.volumeInfo.authors[0],
+              ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
+              thumbnail: book.volumeInfo.imageLinks.thumbnail,
+              description: book.volumeInfo.description,
+              category: category,
+              selflink: book.selfLink,
+              publishDate: book.volumeInfo.publishedDate 
+=======
       console.log(data);//print all respons data
       console.log(data.user);//print user info
       setter(data.user);//setUser to the logged in user
@@ -87,11 +147,38 @@ export const addBook = async (newBook,setter,cookie) => {
              category:newBook.category, 
              selflink:newBook.selfLink, 
             publishDate:newBook.publishedDate
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
           }
           )
       })
       const data = await response.json();
       console.log(data);
+<<<<<<< HEAD
+  } catch (error) {
+      console.log(error)
+  };
+}
+
+export const deleteFromLibrary = async (book,user) => {
+  let cookie = readCookie("jwt_token")
+  try {
+    console.log(book.volumeInfo) 
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
+          method:"DELETE",
+          headers:{"Content-Type":"application/json",
+                  "Authorization":`Bearer ${cookie}`},
+          body: JSON.stringify({
+              user_ID: user.user_ID,
+              google_ID: book.id,
+              // title: book.volumeInfo.title,
+              // author: book.volumeInfo.authors[0],
+              // ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
+              // thumbnail: book.volumeInfo.imageLinks.thumbnail,
+              // description: book.volumeInfo.description,
+              // category: category,
+              // selflink: book.selfLink,
+              // publishDate: book.volumeInfo.publishedDate 
+=======
       // console.log(data.user);
       // setter(data.user);
 
@@ -110,11 +197,77 @@ export const deleteUser = async (username,email,password,setter,cookie) => {
               userName: username,
               email: email,
               password: password
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
           }
           )
       })
       const data = await response.json();
       console.log(data);
+<<<<<<< HEAD
+  } catch (error) {
+      console.log(error)
+  };
+}
+
+export const listBooks = async () => {
+  let cookie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lEIjoyLCJpYXQiOjE2NzYzODc5Mjh9.MujBAdpbOJpGCQjr_-VSwVnBuFV5R0otwHW8oFYbx1U";
+  try {
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}listBooks`,{
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${cookie}`
+      }
+    });
+    const data = await response.json();
+    console.log("listBooks fn data: ", data);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const wishListBooks = async () => {
+  let cookie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lEIjoyLCJpYXQiOjE2NzYzODc5Mjh9.MujBAdpbOJpGCQjr_-VSwVnBuFV5R0otwHW8oFYbx1U";
+  try {
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}listWishBooks`,{
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${cookie}`
+      }
+    });
+    const data = await response.json();
+    console.log("wishListBooks fn data: ", data);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const deleteUser = async (userName,email,password) => {
+  try {
+    console.log("deleteuser")
+    console.log(userName,email,password)
+    const response = await fetch(
+      `${process.env.REACT_APP_REST_API_URL}deleteUser`,{
+        method:"DELETE",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          userName: userName,
+          email: email,
+          password: password
+        })
+      })
+    const data = await response.json()
+    console.log(data)
+    
+  } catch (error) {
+    console.log(error);
+  }
+  
+};
+=======
       console.log(data.user);
      // setter(data.user);//after delete no need store
 
@@ -124,3 +277,4 @@ export const deleteUser = async (username,email,password,setter,cookie) => {
       console.log(error)
   }
 }
+>>>>>>> b363e197cbe42cfa20941738e22464b68e320f2a
