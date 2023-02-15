@@ -16,12 +16,12 @@ export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError
 // Login
 export const login = async (email,password,setter,cookie) => {
   try {
-    //**userName need to be changed to email */
+    //** */login
       const response = await fetch("https://m44-final-project-be.onrender.com/login", {
           method:"POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
-              userName: email,
+              email: email,
               password: password
           }
           )
@@ -72,55 +72,31 @@ export const addUser = async (firstName,surname, email,userName,password,setter,
   }
 }
 
-export const addBook = async (newBook,setter,cookie) => {
-  try {
-     const response = await fetch("https://m44-final-project-be.onrender.com/addBook", {
-          method:"POST",
-          headers: {"Content-Type" : "application/json"},
-          body: JSON.stringify({
-            google_ID: newBook.id,
-             ISBN:newBook.ISBN, 
-             title:newBook.title, 
-             author:newBook.author, 
-             thumbnail:newBook.thumbnail, 
-             description:newBook.description, 
-             category:newBook.category, 
-             selflink:newBook.selfLink, 
-            publishDate:newBook.publishedDate
-          }
-          )
-      })
-      const data = await response.json();
-      console.log(data);
-      // console.log(data.user);
-      // setter(data.user);
+// export const addBook = async (newBook,setter,cookie) => {
+//   try {
+//      const response = await fetch("https://m44-final-project-be.onrender.com/addBook", {
+//           method:"POST",
+//           headers: {"Content-Type" : "application/json"},
+//           body: JSON.stringify({
+//             google_ID: newBook.id,
+//              ISBN:newBook.ISBN, 
+//              title:newBook.title, 
+//              author:newBook.author, 
+//              thumbnail:newBook.thumbnail, 
+//              description:newBook.description, 
+//              category:newBook.category, 
+//              selflink:newBook.selfLink, 
+//             publishDate:newBook.publishedDate
+//           }
+//           )
+//       })
+//       const data = await response.json();
+//       console.log(data);
+//       // console.log(data.user);
+//       // setter(data.user);
 
-      // storeCookie("jwt_token",data.token,7);
-  } catch (error) {
-      console.log(error)
-  }
-}
-
-export const deleteUser = async (username,email,password,setter,cookie) => {
-  try {
-      const response = await fetch("https://m44-final-project-be.onrender.com/deleteUser", {
-          method:"POST",
-          headers: {"Content-Type" : "application/json"},
-          body: JSON.stringify({
-              userName: username,
-              email: email,
-              password: password
-          }
-          )
-      })
-      const data = await response.json();
-      console.log(data);
-      console.log(data.user);
-     // setter(data.user);//after delete no need store
-
-      //storeCookie("jwt_token",data.token,7);
-      storeCookie ("");//reset TOKEN
-  } catch (error) {
-      console.log(error)
-  }
-}
+//       // storeCookie("jwt_token",data.token,7);
+//   } catch (error) {
+//       console.log(error)
+//   }
+// }
