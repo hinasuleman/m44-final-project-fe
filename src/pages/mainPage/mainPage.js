@@ -7,6 +7,7 @@ import "./mainPage.css";
 const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, books, user }) => {
     const [showCardContainer, setShowCardContainer] = useState(false);
     const [showBookSearchModal, setShowBookSearchModal] = useState(false);
+    const [showLibraryContainer, setShowLibraryContainer] = useState(true);
 
     const toggleSearchModal = () => {
         setShowBookSearchModal((prevState) => !prevState);
@@ -15,6 +16,7 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
     const onSearch = () => {
         setShowCardContainer(true);
         toggleSearchModal();
+        setShowLibraryContainer(false);
     };
 
     return (
@@ -30,15 +32,17 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
                         />
                     </div>
                 )}
-
-                <LibraryContainer 
-                    setBooks={setBooks}
-                    setBookList={setBookList}
-                    bookList={bookList}
-                    fetchError={fetchError}
-                    setFetchError={setFetchError}
-                    user={user}
-                />
+                {showLibraryContainer && (
+                    <LibraryContainer
+                        setBooks={setBooks}
+                        setBookList={setBookList}
+                        bookList={bookList}
+                        fetchError={fetchError}
+                        setFetchError={setFetchError}
+                        user={user}
+                        onSearch={onSearch}
+                    />
+                )}
 
                 {showCardContainer && (
                     <div className="cardcontainer">

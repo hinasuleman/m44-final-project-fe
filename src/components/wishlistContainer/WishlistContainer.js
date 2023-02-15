@@ -4,7 +4,7 @@ import WishlistCard from '../wishlistCard/WishlistCard';
 import { wishListBooks } from "../../utilities/utilities";
 
 const WishlistContainer = () => {
-  const [wishList, setWishList] = useState({books: []});
+  const [wishList, setWishList] = useState({ books: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,9 +21,11 @@ const WishlistContainer = () => {
 
   return (
     <div className="wishListContainer">
+      <div className="wlbox">
         {wishList.books.map((book, index) => (
-        <WishlistCard key={index} bookItem={book} />
-      ))}
+          <WishlistCard key={index} bookItem={book} />
+        ))}
+      </div>
     </div>
   );
 };
