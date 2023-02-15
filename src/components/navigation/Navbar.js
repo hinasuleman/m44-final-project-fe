@@ -8,12 +8,10 @@ import peoplearrows from "../../../src/images/icons/people-arrows.png";
 import group from "../../../src/images/icons/people-group.png";
 import "./Navbar.css";
 
-
-
 function Navbar () {
 
         return(
-            <div className="NavbarItems">
+            <div className="navbarItems">
                 <NavLink to="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></NavLink>
 
                 <div className="navMenu">
@@ -21,16 +19,32 @@ function Navbar () {
 
                     <NavLink to="/wishlistpage"><img src={heart} alt="Wishlist Icon" />Wish List</NavLink>
                     
-                    {/* <li><NavLink to="/"><img src={peoplearrows} alt="Share Icon" />Share</NavLink> */}
+                    {/* <NavLink to="/"><img src={peoplearrows} alt="Share Icon" />Share</NavLink> */}
                     <li><img src={peoplearrows} alt="Share Books Icon" />Share</li>
                     
-                    {/* <li><NavLink to="/"><img src={group} alt="Community Icon" />Community</NavLink> */}
+                    {/* <NavLink to="/"><img src={group} alt="Community Icon" />Community</NavLink> */}
                     <li><img src={group} alt="Community Icon" />Community</li>
                     
                     <NavLink to="/userprofilepage"><img src={user} alt="Userprofile Icon" />Profile</NavLink>
                 </div>
-            </div>
-    );
-}
+
+                <div className="navbarItemsSmall">
+                    {/* <NavLink to="/mainpage"><img src={logo} alt="Logo" className="logoImg" /></NavLink> */}
+                
+                    <NavLink to="/mainpage"><img src={book} alt="My Library Icon" /></NavLink>
+
+                    <NavLink to="/wishlistpage"><img src={heart} alt="Wishlist Icon" /></NavLink>
+                                
+                    {/* <NavLink to="/"><img src={peoplearrows} alt="Share Icon" />Share</NavLink> */}
+                    {/* <li><img src={peoplearrows} alt="Share Books Icon" /></li> */}
+                                
+                    {/* <NavLink to="/"><img src={group} alt="Community Icon" />Community</NavLink> */}
+                    {/* <li><img src={group} alt="Community Icon" /></li> */}
+                                
+                    <NavLink to="/userprofilepage"><img src={user} alt="Userprofile Icon" /></NavLink>
+                    </div>
+                </div>
+        );
+    }
 
 export default Navbar;
