@@ -24,7 +24,7 @@ const Card = ({ book }) => {
       <br></br>
       <div className="cardtext">
       <p className="title">{book.volumeInfo.title}</p>
-      <p className="author">{book.volumeInfo.authors}</p>
+      <p className="author">{book.volumeInfo.author}</p>
       </div>
       <div className="plusbtns">
       <button className="librarybtn" onClick={() => (submitHandler1())}>Add to Library</button>
