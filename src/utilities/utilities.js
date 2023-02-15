@@ -125,3 +125,20 @@ export const listBooks = async () => {
   }
 };
 
+export const wishListBooks = async () => {
+  let cookie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lEIjoyLCJpYXQiOjE2NzYzODc5Mjh9.MujBAdpbOJpGCQjr_-VSwVnBuFV5R0otwHW8oFYbx1U";
+  try {
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}listWishBooks`,{
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${cookie}`
+      }
+    });
+    const data = await response.json();
+    console.log("wishListBooks fn data: ", data);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
