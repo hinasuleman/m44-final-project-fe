@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./userprofilePage.css";
 import DeleteUserModal from '../../components/modals/deleteusermodal/DeleteUserModal'
 
-export default function UserprofilePage() {
+  function UserprofilePage() {
   const [currentEmail, setCurrentEmail] = useState("")
   const [newEmail, setNewEmail] = useState("")
   const [currentPassword, setCurrentPassword] = useState("")
@@ -48,3 +48,4 @@ export default function UserprofilePage() {
 }
 
 export default UserprofilePage;
+
