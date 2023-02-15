@@ -80,7 +80,7 @@ export const postToWishlist = async (book,user) => {
 };
 
 export const listBooks = async () => {
-  let cookie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lEIjoyLCJpYXQiOjE2NzYzODc5Mjh9.MujBAdpbOJpGCQjr_-VSwVnBuFV5R0otwHW8oFYbx1U";
+  let cookie = readCookie("jwt_token");
   try {
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}listBooks`,{
       method: "GET",
@@ -98,7 +98,7 @@ export const listBooks = async () => {
 };
 
 export const wishListBooks = async () => {
-  let cookie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lEIjoyLCJpYXQiOjE2NzYzODc5Mjh9.MujBAdpbOJpGCQjr_-VSwVnBuFV5R0otwHW8oFYbx1U";
+  let cookie = readCookie("jwt_token");
   try {
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}listWishBooks`,{
       method: "GET",

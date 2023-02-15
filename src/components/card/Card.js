@@ -5,14 +5,14 @@ import './Card.css';
 const Card = ({ book }) => {
   const submitHandler1 = () => {
     // e.preventDefault();
-    const user = {user_ID:2};
+    const user = {user_ID:23};
     postToLibrary(book,user);
     console.log("book added to library");
   };
 
   const submitHandler2 = () => {
     // e.preventDefault();
-    const user = {user_ID:2};
+    const user = {user_ID:23};
     postToWishlist(book,user);
     console.log("book added to Wishlist");
   };
@@ -24,7 +24,7 @@ const Card = ({ book }) => {
       <br></br>
       <div className="cardtext">
       <p className="title">{book.volumeInfo.title}</p>
-      <p className="author">{book.volumeInfo.authors}</p>
+      <p className="author">{book.volumeInfo.author}</p>
       </div>
       <div className="plusbtns">
       <button className="librarybtn" onClick={() => (submitHandler1())}>Add to Library</button>
