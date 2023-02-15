@@ -13,7 +13,7 @@ const MainPage = ({ setBooks, fetchError, setFetchError, books, user }) => {
         setShowBookSearchModal(false);
         console.log('!!!')
     }
-
+console.log(user);
     return (
         <>
             <div className="mainpage">

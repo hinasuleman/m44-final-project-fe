@@ -11,14 +11,14 @@ import Navbar from './components/navigation/Navbar';
 function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
-  const [user] = useState([]); //need to sort setUser
+  const [user, setUser] = useState([]); //need to sort setUser
 
   return (
     <BrowserRouter>
       <Navbar/>
         <div>
           <Routes>
-            <Route exact path="/" element={<LandingPage />} />
+            <Route exact path="/" element={<LandingPage setter={setUser}/>} />
             <Route exact path="/mainpage" element={
                   <MainPage 
                     setBooks={setBooks}

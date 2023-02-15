@@ -5,7 +5,7 @@ import { login } from "../../utilities/utilities";
 
 
 
-export default function LandingPage(setter) {
+export default function LandingPage({setter}) {
   const navigate = useNavigate();
   const navigateSignIn = (e) =>{
     //handling signup by reirection to signUp page
@@ -24,9 +24,12 @@ export default function LandingPage(setter) {
 
     
         e.preventDefault();
+        console.log(email,password);
         console.log("executing login request")
         //log in + set TOKEN + setUser via setter
+        console.log(setter);
        const userInfo= await login(email,password,setter);
+       
        navigate ("/mainpage");
        //if query succeful move to main
   if (userInfo != null){

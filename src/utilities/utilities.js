@@ -1,5 +1,6 @@
 import {storeCookie, readCookie} from "../common/";
 
+
 export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError, fetchError) => {
   try {
     const res = await fetch(
@@ -14,15 +15,17 @@ export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError
 };
 
 // Login
-export const login = async (email,password,setter,cookie) => {
+export const login = async (email,password,setter) => {
   try {
     //** */login
+    console.log("in utilities", email,password);
       const response = await fetch("https://m44-final-project-be.onrender.com/login", {
           method:"POST",
           headers: {"Content-Type" : "application/json"},
           body: JSON.stringify({
-              email: email,
-              password: password
+              oldEmail: email,
+              password: password,
+              email: email
           }
           )
       })
@@ -32,7 +35,7 @@ export const login = async (email,password,setter,cookie) => {
       setter(data.user);//setUser to the logged in user
 //store token in cookie
       storeCookie("jwt_token",data.token,7);
-      
+      console.log (data.token);
   } catch (error) {
       console.log(error)
   }
