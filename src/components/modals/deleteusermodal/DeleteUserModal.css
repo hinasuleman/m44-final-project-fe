@@ -1,0 +1,10 @@
+.deleteuserprofile {
+    border: 5px solid red;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.deleteForm {
+    border: 1px solid blue;
+}
