@@ -7,6 +7,11 @@ import DeleteUserModal from '../../components/modals/deleteusermodal/DeleteUserM
   const [newEmail, setNewEmail] = useState("")
   const [currentPassword, setCurrentPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
+  const [showDeleteUserModal, setDeleteUserModal] = useState(false)
+
+  const toggleDeleteModal = () => {
+    setDeleteUserModal(true);
+  }
 
   function changehandler(event, setter, state) {
     setter(event.target.value)
@@ -24,8 +29,6 @@ import DeleteUserModal from '../../components/modals/deleteusermodal/DeleteUserM
 
   return (
     <div className="userprofile">
-
-      {/* imagetag */}
       <form onSubmit={(event) => submitHandler1(event)}>
         <input placeholder="current email" onChange={(event) => changehandler(event, setCurrentEmail, currentEmail)} />
         <input placeholder="new email" onChange={(event) => changehandler(event, setNewEmail, newEmail)} />
