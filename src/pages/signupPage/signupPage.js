@@ -10,8 +10,7 @@ export default function SignupPage() {
 
     function changehandler(event, setter, state) {
         setter(event.target.value)
-        console.log(state)
-        
+        console.log(state)  
     }
 
   function submitHandler(event) {
@@ -22,10 +21,10 @@ export default function SignupPage() {
     <div className="signupContainer">
       <form onSubmit={(event) => submitHandler(event)}>
         <input placeholder="First name" onChange={(event) => changehandler(event,setFirstName,firstName)} />
-        <input placeholder= "Surname" onChange={(event) => changehandler(event,setSurname,surname)} />
+        <input placeholder="Surname" onChange={(event) => changehandler(event,setSurname,surname)} />
         <input placeholder="Email" onChange={(event) => changehandler(event,setEmail,email)} />
-        <input placeholder= "Confirm Email" onChange={(event) => changehandler(event,setConfirmEmail,confirmEmail)} />
-        <input placeholder= "Password" onChange={(event) => changehandler(event,setPassword, password)} />
+        <input placeholder="Confirm Email" onChange={(event) => changehandler(event,setConfirmEmail,confirmEmail)} />
+        <input placeholder="Password" onChange={(event) => changehandler(event,setPassword, password)} />
         <button type="submit">Sign Up!</button>
       </form>
     </div>
