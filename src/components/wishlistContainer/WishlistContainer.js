@@ -1,28 +1,31 @@
-import React from "react";
-import WishlistCard from "../wishlistCard/WishlistCard";
+import React, { useState, useEffect } from "react";
 import './WishlistContainer.css';
+import WishlistCard from '../wishlistCard/WishlistCard';
+import { wishListBooks } from "../../utilities/utilities";
 
-const WishlistContainer = ({ books, fetchError }) => {
-  if(!fetchError){
-    return (
-      <div className="WishlistContainer">
-        {books.map((book, index) => (
-          <WishlistCard key={index} book={book} />
-        ))}
-      </div>
-    );
-  } else if (fetchError) {
-    return <ErrorInFetchBooks />
-  }
-};
+const WishlistContainer = () => {
+  const [wishList, setWishList] = useState({books: []});
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await wishListBooks();
+      console.log("data from wishListBooks:", data);
+      setWishList(data);
+    };
+    fetchData();
+  }, []);
 
-const ErrorInFetchBooks = () => {
-  return(
-    <div>
-      <h1>Error in Fetch Request</h1>
+  useEffect(() => {
+    console.log("wishList: ", wishList);
+  }, [wishList]);
+
+  return (
+    <div className="wishListContainer">
+        {wishList.books.map((book, index) => (
+        <WishlistCard key={index} bookItem={book} />
+      ))}
     </div>
   );
-}
+};
 
 export default WishlistContainer;
