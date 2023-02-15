@@ -30,7 +30,7 @@
 
 .navMenu{
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     grid-gap: 5px;
     list-style: none;
     align-items: center;
@@ -40,7 +40,7 @@
  .navMenu a{
     font-weight: 700;
     color: rgb(30, 30, 30, 100%);
-    padding: 11px 16px;
+    padding: 11px 15px;
     white-space: nowrap;
     border-radius: 12px; 
 }
@@ -63,7 +63,7 @@
     display: none;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:968px){
     .navMenu{
         display: none;
     }
@@ -76,7 +76,7 @@
     }
     .navbarItemsSmall img{
         height: 30px;
-        margin: 0px 15px 0px 15px;
+        margin: 0px 12px 0px 10px;
     }
     .navbarItemsSmall a{
         border-radius: 12px; 
