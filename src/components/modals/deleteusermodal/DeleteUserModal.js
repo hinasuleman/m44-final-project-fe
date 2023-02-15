@@ -52,4 +52,7 @@ const DeleteUserModal = () => {
     </div>
   )
 }
+
+
 export default DeleteUserModal;
+
