@@ -23,7 +23,7 @@ function BookSearchModal({ setBooks, fetchError, setFetchError, onSearch }) {
     <>
       <div className="searchbox">
         <form className="searchform" onSubmit={handleSearch}>
-          <h1>Search</h1>
+          <h1 className="searchh1">Search</h1>
           <input
             className="searchinput"
             type="text"
@@ -38,7 +38,7 @@ function BookSearchModal({ setBooks, fetchError, setFetchError, onSearch }) {
             <option value="isbn">ISBN</option>
           </select>
 
-          <button type="submit">Search</button>
+          <button className="submitbtn" type="submit">Search</button>
         </form>
       </div>
     </>

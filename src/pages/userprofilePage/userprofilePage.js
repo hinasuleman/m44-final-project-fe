@@ -7,11 +7,6 @@ export default function UserprofilePage() {
   const [newEmail, setNewEmail] = useState("")
   const [currentPassword, setCurrentPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
-  const [showDeleteUserModal, setDeleteUserModal] = useState(false)
-
-  const toggleDeleteModal = () => {
-    setDeleteUserModal(true);
-  }
 
   function changehandler(event, setter, state) {
     setter(event.target.value)
@@ -48,7 +43,8 @@ export default function UserprofilePage() {
       <div>
         {showDeleteUserModal && <DeleteUserModal />}
       </div>
-
     </div>
   );
 }
+
+export default UserprofilePage;

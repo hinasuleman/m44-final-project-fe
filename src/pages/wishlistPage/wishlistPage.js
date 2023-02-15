@@ -1,9 +1,15 @@
 import WishlistContainer from "../../components/wishlistContainer/WishlistContainer";
 
-const WishlistPage = ({setBooks, fetchError, setFetchError, books, user}) => {
-    return ( 
+const WishlistPage = ({ setBooks, fetchError, setFetchError, books, user }) => {
+
+
+
+    return (
         <>
-        <WishlistContainer fetchError={fetchError} user={user}/>
+            <div className="wishlistMain">
+                <WishlistContainer fetchError={fetchError} user={user} />
+
+            </div>
         </>
     )
 };
