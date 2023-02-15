@@ -1,9 +1,18 @@
+//import React, { useState } from "react";
 import WishlistContainer from "../../components/wishlistContainer/WishlistContainer";
+import "./wishlistPage.css";
 
-const WishlistPage = ({setBooks, fetchError, setFetchError, books, user}) => {
-    return ( 
+const WishlistPage = ({ books, fetchError, setWishList, wishList }) => {
+
+    return (
         <>
-        <WishlistContainer fetchError={fetchError} user={user}/>
+            <div className="wishlistMain">
+                <div className="wishListContainer">
+                <WishlistContainer books={books} fetchError={fetchError} setWishList={setWishList} wishList={wishList} />
+                </div> 
+                
+
+            </div>
         </>
     )
 };

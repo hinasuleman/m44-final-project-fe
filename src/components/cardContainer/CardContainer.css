@@ -1,7 +1,17 @@
 .cardContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 50vh;
+    height: 100%;
+    background-color: rgb(249, 246, 240, 100%);
+}
 
+.bccontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 100px;
 }
