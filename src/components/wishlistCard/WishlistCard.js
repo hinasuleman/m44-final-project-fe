@@ -9,7 +9,7 @@ const WishlistCard = ({ bookItem }) => {
   
   return (
     <div className="wishlistCard">
-      {bookItem.thumbnail ? <img src="book.thumbnail" height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
+      {bookItem.thumbnail ? <img src={bookItem.thumbnail} height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
       <br></br>
       <p className="title">{bookItem.title}</p>
       <p className="author">{bookItem.authors}</p>
