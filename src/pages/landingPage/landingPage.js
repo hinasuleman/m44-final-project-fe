@@ -1,52 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../src/images/logo/full_logo_transparent.png";
 import "./landingPage.css";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../utilities/userfunctions";
 
-export default function LandingPage(setter) {
+export default function LandingPage({ setter }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   const navigateSignIn = (e) => {
-    //handling signup by reirection to signUp page
     e.preventDefault();
     navigate("/signuppage");
   };
-  //handle login intitate TOKEN and store User information
 
   const handleLogin = async (e) => {
-    console.log("login functionality");
-
-    e.preventDefault();
-
-    const email = document.getElementById("emailBox").value;
-    const password = document.getElementById("passwordBox").value;
-
     e.preventDefault();
     console.log("executing login request");
-    //log in + set TOKEN + setUser via setter
-    const userInfo = await login(email, password, setter);
+    await login(email, password, setter);
     navigate("/mainpage");
-    //if query succeful move to main
-    if (userInfo != null) {
-      navigate("/mainpage");
-    }
   };
+
   return (
     <div>
       <form>
         <input
           type="text"
           id="emailBox"
-          placeholder=" Email"
-          // onChange={(event) => setEmail(event.target.value)}
+          placeholder="Email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
-        <br></br>
+        <br />
 
         <input
           type="password"
           id="passwordBox"
-          placeholder=" Password"
-          // onChange={(event) => setPassword(event.target.value)}
+          placeholder="Password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
         />
 
         <br></br>
