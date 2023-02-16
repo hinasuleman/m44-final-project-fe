@@ -10,6 +10,7 @@ const WishlistPage = ({ books, setFetchError, fetchError, setWishList, wishList,
     const [showCardContainer, setShowCardContainer] = useState(false);
     const [showBookSearchModal, setShowBookSearchModal] = useState(false);
 
+
     const toggleSearchModal = () => {
         setShowBookSearchModal((prevState) => !prevState);
     };
@@ -51,7 +52,9 @@ const WishlistPage = ({ books, setFetchError, fetchError, setWishList, wishList,
                             fetchError={fetchError}
                             user={user}
                             setShowCardContainer={setShowCardContainer}
-                            setShowWishlistContainer={setShowWishlistContainer} />
+                            setShowWishlistContainer={setShowWishlistContainer}
+                            page="wishlist"
+                        />
                     </div>
                 )}
 
