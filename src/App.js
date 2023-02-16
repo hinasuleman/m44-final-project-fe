@@ -10,6 +10,57 @@ import Navbar from './components/navigation/Navbar';
 import WishlistPage from "./pages/wishlistPage/wishlistPage";
 import Footer from './components/footer/Footer';
 
+// function App() {
+//   const [books, setBooks] = useState([]);
+//   const [fetchError, setFetchError] = useState(false);
+//   const [user, setUser] = useState([]);
+//   const [bookList, setBookList] = useState(listBooks());
+//   const [wishList, setWishList] = useState(wishListBooks());
+
+//   return (
+//     <BrowserRouter>
+//       <Navbar />
+//       <div>
+//         <Routes>
+//           <Route exact path="/" element={<LandingPage />} />
+//           <Route exact path="/mainpage" element={
+//             <MainPage
+//               setBooks={setBooks}
+//               setBookList={setBookList}
+//               bookList={bookList}
+//               fetchError={fetchError}
+//               setFetchError={setFetchError}
+//               books={books}
+//               user={user}
+//             />
+//           } />
+//           <Route exact path="/userprofilepage" element={<UserprofilePage />} />
+//           <Route exact path="/signuppage" element={<SignupPage />} />
+//           <Route exact path="/wishlistpage" element={
+//             <WishlistPage
+//               setWishList={setWishList}
+//               WishList={wishList}
+//             />
+//           } />
+//         </Routes>
+//       </div>
+//       <Navbar setUser={setUser} />
+//     </BrowserRouter>
+//   );
+// }
+
+// function Footer({ setUser }) {
+//   return (
+//     <div>
+//       {/* add your footer code here */}
+//     </div>
+//   );
+// }
+
+
+// export default App;
+
+// npm install --save styled-components 
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -45,23 +96,9 @@ function App() {
               } />
           </Routes>
         </div>
-        <Footer setUser={setUser}/> {/* fix: pass setUser as a prop */}
+        <Footer />
     </BrowserRouter>
   );
 }
 
-function Footer ({ setUser }) {
-  return (
-    <BrowserRouter>
-      <div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
-}
-// npm install --save styled-components 
 export default App;
