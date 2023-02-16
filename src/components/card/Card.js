@@ -2,18 +2,18 @@ import React from "react";
 import { postToLibrary, postToWishlist } from "../../utilities/utilities";
 import './Card.css';
 
-const Card = ({ book }) => {
+const Card = ({ book, user }) => {
   const submitHandler1 = () => {
     // e.preventDefault();
-    const user = {user_ID:23};
-    postToLibrary(book,user);
+    const userID = user.user_ID;
+    postToLibrary(book,userID);
     console.log("book added to library");
   };
 
   const submitHandler2 = () => {
     // e.preventDefault();
-    const user = {user_ID:23};
-    postToWishlist(book,user);
+    const userID = user.user_ID;
+    postToWishlist(book,userID);
     console.log("book added to Wishlist");
   };
 
