@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../card/Card";
 import './CardContainer.css';
 
-const CardContainer = ({ page, books, fetchError, user, setShowCardContainer, setShowLibraryContainer, setShowWishlistContainer }) => {
+const CardContainer = ({ page, books, fetchError, user, setShowCardContainer, setShowLibraryContainer, setShowWishlistContainer, setWishList }) => {
   const toggleSearchBtn = () => {
     setShowCardContainer(false);
     if (page === "library") {
@@ -28,7 +28,7 @@ const CardContainer = ({ page, books, fetchError, user, setShowCardContainer, se
             </div>
           </div>
           {books.map((book, index) => (
-            <Card key={index} book={book} />
+            <Card key={index} book={book} user={user} />
           ))}
         </div>
       </div >
