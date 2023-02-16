@@ -74,7 +74,7 @@ function UserprofilePage() {
       <div>{showDeleteUserModal && <DeleteUserModal />}</div>
       <div className="box1">.</div>
       <div className="box2">
-        <img src={user} alt="User picture" />
+        <img src={user} alt="" />
       </div>
     </div>
   );

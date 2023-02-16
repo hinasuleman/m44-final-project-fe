@@ -34,7 +34,7 @@ export const postToLibrary = async (book,user) => {
               thumbnail: book.volumeInfo.imageLinks.thumbnail,
               description: book.volumeInfo.description,
               category: category,
-              selflink: book.selfLink,
+              selfLink: book.selfLink,
               publishDate: book.volumeInfo.publishedDate 
           }
           )
@@ -67,7 +67,7 @@ export const postToWishlist = async (book,user) => {
               thumbnail: book.volumeInfo.imageLinks.thumbnail,
               description: book.volumeInfo.description,
               category: category,
-              selflink: book.selfLink,
+              selfLink: book.selfLink,
               publishDate: book.volumeInfo.publishedDate 
           }
           )
