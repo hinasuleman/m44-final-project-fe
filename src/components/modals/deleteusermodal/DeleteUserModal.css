@@ -1,10 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@900&display=swap");
+
+body {
+  background-color: rgba(249, 246, 240, 1);
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
 .deleteuserprofile {
-    border: 5px solid red;
-    height: 500px;
-    display: flex;
-    justify-content: center;
+  background-color: rgba(249, 246, 240, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
 }
 
 .deleteForm {
-    border: 1px solid blue;
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid gray;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.confirmDeleteBtn {
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid grey;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.reConfirmDeleteBtn {
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid grey;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  padding: 9px;
+}
+
+.Danger {
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid grey;
+  position: fixed;
+  top: 59%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  padding: 13px;
+}
+
+#deleteBtn {
+  background-color: rgba(26, 46, 42, 1);
+  position: fixed;
+  color: antiquewhite;
+  border-radius: 9px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  top: 640px;
+  left: auto;
+  width: 170px;
 }
