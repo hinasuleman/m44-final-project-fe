@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import Header from './components/header/Header';
 import LandingPage from "./pages/landingPage/landingPage";
 import MainPage from "./pages/mainPage/mainPage";
 import SignupPage from "./pages/signupPage/signupPage";
 import UserprofilePage from "./pages/userprofilePage/userprofilePage";
 import Navbar from './components/navigation/Navbar';
 import Footer from './components/footer/Footer';
-import Footer from './components/footer';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -35,6 +35,14 @@ function App() {
         </div>
     </BrowserRouter>
   );
+}
+
+import Header from './components/header';
+
+function App() {
+	return (
+	  <Header />
+	);
 }
 
 function App() {
