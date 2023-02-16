@@ -13,11 +13,11 @@
   justify-content: center;
 }
 
-#currentEmailBox {
+#currentEmailBox1 {
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
   top: -155px;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
   top: -104px;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -53,31 +53,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-#currentPasswordBox {
+#currentPasswordBox1 {
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
   top: 19px;
-  left: 320px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 290px;
-  height: 42px;
-  padding: 5px;
-  border-radius: 7px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 40%);
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-}
-
-#usernameBox {
-  background-color: rgb(255, 255, 255, 100%);
-  position: absolute;
-  top: 11%;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -97,7 +77,7 @@
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
   top: 68px;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -117,7 +97,7 @@
   background-color: rgba(26, 46, 42, 1);
   position: absolute;
   top: -60px;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -138,7 +118,7 @@
   background-color: rgba(26, 46, 42, 1);
   position: absolute;
   top: 112px;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -159,7 +139,7 @@
   background-color: rgba(231, 45, 18, 1);
   position: absolute;
   top: 150px;
-  left: 320px;
+  left: 89px;
   transform: translate(-50%, -50%);
   width: 105px;
   height: 30px;
@@ -176,21 +156,25 @@
 .box1 {
   position: fixed;
   top: -250px;
-  width: 653px;
+  width: 528px;
   height: 574px;
   background-color: rgba(242, 239, 224, 1);
-  left: -174px;
+  color: antiquewhite;
+  /* z-index: -1; */
+  left: -266px;
 }
 
 .box2 {
   position: fixed;
+  z-index: -1;
 }
 
 .box2 img {
   position: fixed;
-  top: -183px;
-  width: 220px;
-  height: 260px;
+  z-index: -1;
+  top: -314px;
+  width: 94px;
+  height: 114px;
   background: none;
-  left: -116px;
+  left: -249px;
 }

@@ -58,7 +58,8 @@ body {
 }
 
 .Danger {
-  background-color: rgba(249, 246, 240, 1);
+  background-color: rgba(26, 46, 42, 1);
+  color: antiquewhite;
   border: 1px solid grey;
   position: fixed;
   top: 59%;
@@ -78,7 +79,67 @@ body {
   border-radius: 9px;
   font-size: 17px;
   font-family: "Roboto", sans-serif;
-  top: 640px;
-  left: auto;
+  top: 240px;
+  left: 291px;
   width: 170px;
+}
+
+#currentEmailBox2 {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 62px;
+  left: 386px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#currentPasswordBox2 {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 115px;
+  left: 386px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#usernameBox {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 35%;
+  left: 386px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }

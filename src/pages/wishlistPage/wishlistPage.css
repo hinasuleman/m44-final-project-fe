@@ -1,9 +1,3 @@
-.wishListContainer {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
 .searchbtn {
     border-radius: 50%;
     height: 90px;

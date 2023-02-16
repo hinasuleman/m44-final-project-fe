@@ -25,7 +25,7 @@
 
 .srh1 {
     display: flex;
-    margin: 0 43rem 0 55rem;
+    margin: 0 10rem 0 10rem;
 }
 
 
@@ -43,4 +43,10 @@
     height: 50px;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
+}
+
+.scrollbtn {
+    margin: 0 0 0 114rem;
+    position: fixed;
+    z-index: 1;
 }

@@ -31,7 +31,7 @@ function UserprofilePage() {
     <div className="userprofile_container">
       <form onSubmit={(event) => submitHandler1(event)}>
         <input
-          id="currentEmailBox"
+          id="currentEmailBox1"
           placeholder="current email"
           onChange={(event) =>
             changehandler(event, setCurrentEmail, currentEmail)
@@ -48,7 +48,7 @@ function UserprofilePage() {
       </form>
       <form onSubmit={(event) => submitHandler2(event)}>
         <input
-          id="currentPasswordBox"
+          id="currentPasswordBox1"
           placeholder="current password"
           onChange={(event) =>
             changehandler(event, setCurrentPassword, currentPassword)
@@ -72,9 +72,8 @@ function UserprofilePage() {
         </div>
       </form>
       <div>{showDeleteUserModal && <DeleteUserModal />}</div>
-      <div className="box1">.</div>
       <div className="box2">
-        <img src={user} alt="User picture" />
+        <img src={user} alt="" />
       </div>
     </div>
   );
