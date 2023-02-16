@@ -59,7 +59,7 @@ export default function LandingPage({ setter }) {
     <div className="box-container">
         {/* <div className="box1"></div> */}
         <div className="box2"></div>
-        <div className="logo"><img src={logo} alt="Logo" /></div>
+        <div className="logo"><img src={logo} alt="" /></div>
         <div className="box3">Welcome!</div>
         <div className="box4">Login or sign up to get started</div>
     
