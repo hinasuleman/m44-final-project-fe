@@ -19,7 +19,7 @@ return (
 	<Container>
 		<Row>
 		<Column>
-			<Heading>About Us</Heading>
+			<Heading>Books</Heading>
 			<FooterLink href="#">Books</FooterLink>
 			<FooterLink href="/wishlistPage">Wishlist</FooterLink>
 		</Column>
