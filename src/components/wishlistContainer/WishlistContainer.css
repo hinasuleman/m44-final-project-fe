@@ -1,7 +1,25 @@
-.wishListContainer {
+.wishListContainer,
+.wlcontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: rgb(249, 246, 240, 100%);
+}
+
+.wlContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
     height: 100%;
+}
+
+.wishlisttitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    width: 100%;
 }

@@ -1,4 +1,5 @@
 .bookCard {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,10 +7,6 @@
     padding: 10px;
     margin: 10px 10px 0 0;
     width: 25%;
-}
-
-.bccontainer {
-    margin-top: 200px;
 }
 
 .title {
@@ -30,7 +27,21 @@
     display: flex;
 }
 
-.librarybtn,
+.librarybtn {
+    background-color: rgb(26, 46, 42, 100%);
+    color: rgb(249, 246, 240, 100%);
+    border: 1px solid rgba(0, 0, 0, 100%);
+    border-radius: 9px;
+    padding: 12px;
+    text-align: center;
+    margin: 0px 10px 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
 .wishlistbtn {
     background-color: rgb(26, 46, 42, 100%);
     color: rgb(249, 246, 240, 100%);
@@ -40,8 +51,9 @@
     text-align: center;
     margin: 0px 10px 3px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    width: 130px;
+    width: 160px;
     height: 50px;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
+
 }

@@ -4,7 +4,7 @@ import LibraryCard from '../libraryCard/LibraryCard';
 import { listBooks } from "../../utilities/utilities";
 
 const LibraryContainer = () => {
-  const [bookList, setBookList] = useState({books: []});
+  const [bookList, setBookList] = useState({ books: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,10 +20,17 @@ const LibraryContainer = () => {
   }, [bookList]);
 
   return (
-    <div className="libraryCardContainer">
-      {bookList.books.map((book, index) => (
-        <LibraryCard key={index} bookItem={book} />
-      ))}
+    <div className="bgcontainer">
+      <div className="libraryCardContainer">
+        <div className="mylibtitle">
+          <h1>My Library</h1>
+        </div>
+        <div className="lcContainer">
+          {bookList.books.map((book, index) => (
+            <LibraryCard key={index} bookItem={book} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

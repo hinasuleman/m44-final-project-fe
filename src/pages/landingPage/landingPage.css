@@ -13,7 +13,7 @@ body {
 #emailBox {
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
-  top: 49%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -34,7 +34,7 @@ body {
 #passwordBox {
   background-color: rgb(255, 255, 255, 100%);
   position: absolute;
-  top: 57%;
+  top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -65,14 +65,14 @@ body {
 #loginBtn {
   background-color: rgba(26, 46, 42, 1);
   position: absolute;
-  top: 67%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 250px;
+  width: 240px;
   height: 50px;
   color: rgb(249, 246, 240, 100%);
   border-radius: 7px;
@@ -87,14 +87,14 @@ body {
 #signUpBtn {
   background-color: rgba(26, 46, 42, 1);
   position: absolute;
-  top: 75%;
+  top: 76%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 250px;
+  width: 240px;
   height: 50px;
   color: rgb(249, 246, 240, 100%);
   border-radius: 7px;
@@ -118,9 +118,9 @@ body {
 
 .box1 {
   position: fixed;
-  width: 532px;
-  height: 568px;
-  background-color: rgba(242, 239, 224, 0.66);
+  width: 575px;
+  height: 700px;
+  background-color: rgb(239, 233, 219, 60%);
   padding: 20px;
   border-radius: 65px;
   text-align: center;
@@ -128,12 +128,12 @@ body {
 
 .box2 {
   position: fixed;
-  width: 499px;
-  height: 532px;
-  background-color: rgba(242, 239, 224, 1);
+  width: 550px;
+  height: 675px;
+  background-color: rgb(239, 233, 219, 100%);
   border-radius: 65px;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 14px;
   font-size: 60px;
   font-weight: 900;
 }
@@ -145,21 +145,21 @@ body {
 
 .box3 {
   position: fixed;
-  top: -159px;
+  top: -25px;
   width: 300px;
   height: 60px;
+  left: -48px;
   text-align: center;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .box4 {
   position: fixed;
-  top: -112px;
+  top: 5px;
   width: 250px;
-  height: 60px;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .box5 {

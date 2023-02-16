@@ -19,18 +19,16 @@ export const deleteUser = async (username,email,password,setter,cookie) => {
     }
   };
 
-export const addUser = async (firstName,surname, email,userName,password,setter,cookie) => {
+export const addUser = async (firstName,surname, email,password,setter) => {
     try {
-      console.log("post functionality",firstName,surname,userName, email,password);
         const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addUser`, {
             method:"POST",
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify({
               firstName: firstName,
               surname: surname,
-                userName : userName,
-                email: email,
-                password: password
+              email: email,
+              password: password
             }
             )
         })
@@ -63,6 +61,10 @@ export const addUser = async (firstName,surname, email,userName,password,setter,
   };
 
  export const logout = (setUser) => {
-    document.cookie = "jwt_token =; path=/; expires = Thu, 01 Jan 1970 00:00:01 GMT;";
-    setUser("");
+    try {
+      document.cookie = "jwt_token =; path=/; expires = Thu, 01 Jan 1970 00:00:01 GMT;";
+      setUser("");
+    } catch (error) {
+      console.log(error);
+    }  
   };

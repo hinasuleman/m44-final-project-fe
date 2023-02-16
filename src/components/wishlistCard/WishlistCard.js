@@ -1,22 +1,32 @@
 import React from "react";
+import { deleteFromWishlist, moveToLibrary } from "../../utilities/utilities";
 import './WishlistCard.css';
 
 const WishlistCard = ({ bookItem }) => {
+  const submitHandler1 = () => {
+    deleteFromWishlist(bookItem);
+    console.log("book removed from wishlist");
+  };
 
-    //code to grab book data from DB
+  const submitHandler2 = () => {
+    moveToLibrary(bookItem);
+    console.log("book moved to library");
+  };
 
-
-  
   return (
     <div className="wishlistCard">
-      {bookItem.thumbnail ? <img src={bookItem.thumbnail} height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
-      <br></br>
-      <p className="title">{bookItem.title}</p>
-      <p className="author">{bookItem.author}</p>
-      <button >Remove from Wishlist</button>
-      <button >Add to Library</button>
+        {bookItem.thumbnail ? <img src={bookItem.thumbnail} height="350vh" alt="" /> :
+        <img src={require("../../images/blankCover.jpg")} height="350vh" alt="" />}
+        <br></br>
+          <div className="cardtexts">
+            <p className="title">{bookItem.title}</p>
+            <p className="author">{bookItem.author}</p>
+          </div>
+          <div className="rmvaddbtns">
+            <button className="rmvbutons" onClick={() => (submitHandler1())}>Remove from Wishlist</button>
+            <button className="addbutons" onClick={() => (submitHandler2())}>Move to Library</button>
+          </div>
     </div>
-
   );
 };
 

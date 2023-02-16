@@ -18,33 +18,49 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar setUser={setUser}/>
-        <div>
-          <Routes>
-            <Route exact path="/" element={<LandingPage setter={setUser}/>} />
-            <Route exact path="/mainpage" element={
-                  <MainPage 
-                    setBooks={setBooks}
-                    setBookList={setBookList}
-                    bookList={bookList}
-                    fetchError={fetchError}
-                    setFetchError={setFetchError}
-                    books={books}
-                    user={user}
-                  />
-               }/>
-            <Route exact path="/userprofilepage" element={<UserprofilePage/>} />
-            <Route exact path="/signuppage" element={<SignupPage />} />
-            <Route exact path="/wishlistpage" element={
-                  <WishlistPage
-                  setWishList={setWishList}
-                  WishList={wishList}
-                   />
-              } />
-          </Routes>
-        </div>
+      {user && <Navbar setUser={setUser} />}
+      <div>
+        <Routes>
+          <Route exact path="/" element={<LandingPage setter={setUser} />} />
+          <Route
+            exact
+            path="/mainpage"
+            element={
+              <MainPage
+                setBooks={setBooks}
+                setBookList={setBookList}
+                bookList={bookList}
+                fetchError={fetchError}
+                setFetchError={setFetchError}
+                books={books}
+                user={user}
+              />
+            }
+          />
+          <Route exact path="/userprofilepage" element={<UserprofilePage />} />
+          <Route exact path="/signuppage" element={<SignupPage setter={setUser} />} />
+          <Route
+            exact
+            path="/wishlistpage"
+            element={
+              <WishlistPage
+                setWishList={setWishList}
+                WishList={wishList}
+                setBooks={setBooks}
+                setBookList={setBookList}
+                bookList={bookList}
+                fetchError={fetchError}
+                setFetchError={setFetchError}
+                books={books}
+                user={user}
+              />
+            }
+          />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
+
 
 export default App;
