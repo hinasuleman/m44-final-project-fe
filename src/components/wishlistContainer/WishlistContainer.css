@@ -1,4 +1,5 @@
-.wishListContainer {
+.wishListContainer,
+.wlcontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -7,13 +8,13 @@
     background-color: rgb(249, 246, 240, 100%);
 }
 
-.wlbox {
+.wlContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100%;
     margin-top: 20px;
+    height: 100%;
 }
 
 .wishlisttitle {
