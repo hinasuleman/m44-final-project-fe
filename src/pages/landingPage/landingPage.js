@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./landingPage.css";
 import { useNavigate  } from 'react-router-dom';
-import { login } from "../../utilities/userfunctions";
+import { login, logout } from "../../utilities/userfunctions";
 
 export default function LandingPage({ setter }) {
   const [email, setEmail] = useState("");
@@ -11,6 +11,7 @@ export default function LandingPage({ setter }) {
 
   const navigateSignIn = (e) => {
     e.preventDefault();
+    logout(setter)
     navigate("/signuppage");
   }
 
@@ -20,6 +21,7 @@ export default function LandingPage({ setter }) {
     await login(email, password, setter);
     navigate("/mainpage");
   }
+
 
   return (
     <div>

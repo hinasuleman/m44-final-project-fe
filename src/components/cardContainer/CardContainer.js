@@ -2,10 +2,14 @@ import React from "react";
 import Card from "../card/Card";
 import './CardContainer.css';
 
-const CardContainer = ({ books, fetchError, user, setShowCardContainer, setShowLibraryContainer, setWishList }) => {
+const CardContainer = ({ page, books, fetchError, user, setShowCardContainer, setShowLibraryContainer, setShowWishlistContainer }) => {
   const toggleSearchBtn = () => {
     setShowCardContainer(false);
-    setShowLibraryContainer(true);
+    if (page === "library") {
+      setShowLibraryContainer(true);
+    } else if (page === "wishlist") {
+      setShowWishlistContainer(true);
+    }
   };
 
   if (!fetchError) {
@@ -14,10 +18,17 @@ const CardContainer = ({ books, fetchError, user, setShowCardContainer, setShowL
         <div className="bccontainer">
           <div className="srtbdiv">
             <h1 className="srh1">Search Results</h1>
-            <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button>
+            <div className="scrollbtn">
+              {page === "library" ?
+                <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button>
+                :
+                <button className="returnbtn" onClick={toggleSearchBtn}>Return to wishlist</button>
+              }
+              {/* <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button> */}
+            </div>
           </div>
           {books.map((book, index) => (
-            <Card key={index} book={book} user={user} />
+            <Card key={index} book={book} />
           ))}
         </div>
       </div >
@@ -26,6 +37,7 @@ const CardContainer = ({ books, fetchError, user, setShowCardContainer, setShowL
     return <ErrorInFetchBooks />
   }
 };
+
 
 const ErrorInFetchBooks = () => {
   return (

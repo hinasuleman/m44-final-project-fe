@@ -18,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar setUser={setUser}//>
+      <Navbar setUser={setUser}/>
       <div>
         <Routes>
           <Route exact path="/" element={<LandingPage setter={setUser}/>} />
@@ -34,7 +34,7 @@ function App() {
             />
           } />
           <Route exact path="/userprofilepage" element={<UserprofilePage />} />
-          <Route exact path="/signuppage" element={<SignupPage />} />
+          <Route exact path="/signuppage" element={<SignupPage setter={setUser}/>} />
           <Route exact path="/wishlistpage" element={
             <WishlistPage
               setWishList={setWishList}
