@@ -12,37 +12,44 @@ import WishlistPage from "./pages/wishlistPage/wishlistPage";
 function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
-  const [user] = useState([]); //need to sort setUser
+  const [user, setUser] = useState();
   const [bookList, setBookList] = useState(listBooks());
   const [wishList, setWishList] = useState(wishListBooks());
 
   return (
     <BrowserRouter>
-      <Navbar/>
-        <div>
-          <Routes>
-            <Route exact path="/" element={<LandingPage />} />
-            <Route exact path="/mainpage" element={
-                  <MainPage 
-                    setBooks={setBooks}
-                    setBookList={setBookList}
-                    bookList={bookList}
-                    fetchError={fetchError}
-                    setFetchError={setFetchError}
-                    books={books}
-                    user={user}
-                  />
-               }/>
-            <Route exact path="/userprofilepage" element={<UserprofilePage/>} />
-            <Route exact path="/signuppage" element={<SignupPage />} />
-            <Route exact path="/wishlistpage" element={
-                  <WishlistPage
-                  setWishList={setWishList}
-                  WishList={wishList}
-                   />
-              } />
-          </Routes>
-        </div>
+      <Navbar setUser={setUser}/>
+      <div>
+        <Routes>
+          <Route exact path="/" element={<LandingPage setter={setUser}/>} />
+          <Route exact path="/mainpage" element={
+            <MainPage
+              setBooks={setBooks}
+              setBookList={setBookList}
+              bookList={bookList}
+              fetchError={fetchError}
+              setFetchError={setFetchError}
+              books={books}
+              user={user}
+            />
+          } />
+          <Route exact path="/userprofilepage" element={<UserprofilePage />} />
+          <Route exact path="/signuppage" element={<SignupPage setter={setUser}/>} />
+          <Route exact path="/wishlistpage" element={
+            <WishlistPage
+              setWishList={setWishList}
+              WishList={wishList}
+              setBooks={setBooks}
+              setBookList={setBookList}
+              bookList={bookList}
+              fetchError={fetchError}
+              setFetchError={setFetchError}
+              books={books}
+              user={user}
+            />
+          } />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

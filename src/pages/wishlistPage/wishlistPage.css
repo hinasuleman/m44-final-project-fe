@@ -1,12 +1,7 @@
-body {
-    background-color: rgb(249, 246, 240, 100%);
-}
-
 .wishListContainer {
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;   
 }
 
 .searchbtn {
