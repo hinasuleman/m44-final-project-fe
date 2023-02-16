@@ -15,6 +15,7 @@ export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError
 
 export const postToLibrary = async (book,user) => {
   try {
+    let cookie = readCookie("jwt_token");
     console.log(book.volumeInfo)
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
@@ -24,7 +25,7 @@ export const postToLibrary = async (book,user) => {
     if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addBook`, {
           method:"POST",
-          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${cookie}`},
           body: JSON.stringify({
               user_ID: user.user_ID,
               google_ID: book.id,
@@ -48,6 +49,7 @@ export const postToLibrary = async (book,user) => {
 
 export const postToWishlist = async (book,user) => {
   try {
+    let cookie = readCookie("jwt_token");
     console.log(book.volumeInfo)
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
@@ -57,7 +59,7 @@ export const postToWishlist = async (book,user) => {
     if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
           method:"POST",
-          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${cookie}`},
           body: JSON.stringify({
               user_ID: user.user_ID,
               google_ID: book.id,
