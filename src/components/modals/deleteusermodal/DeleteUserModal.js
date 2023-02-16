@@ -25,18 +25,18 @@ const DeleteUserModal = () => {
     <div className="deleteuserprofile">
       <form className="deleteForm" onSubmit={(event) => submitHandler1(event)}>
         <input
-          id="currentEmailBox"
-          placeholder="current email"
+          id="currentEmailBox2"
+          placeholder="Current Email"
           onChange={(event) => setCurrentEmail(event.target.value)}
         />
         <input
-          id="currentPasswordBox"
-          placeholder="password"
+          id="currentPasswordBox2"
+          placeholder="Password"
           onChange={(event) => setPassword(event.target.value)}
         />
         <input
           id="usernameBox"
-          placeholder="username"
+          placeholder="Username"
           onChange={(event) => setUserName(event.target.value)}
         />
         <br></br>
