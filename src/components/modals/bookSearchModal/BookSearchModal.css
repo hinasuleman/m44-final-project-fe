@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@900&display=swap");
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.searchbox {
+    width: 600px;
+    height: 500px;
+    background-color: rgba(242, 239, 224, 1);
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 65px;
+    text-align: center;
+}
+
+.searchform {
+    background-color: rgba(242, 239, 224, 1);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 390px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchh1 {
+    background-color: rgba(242, 239, 224, 1);
+    margin-bottom: 100px;
+    margin-top: 45%;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.searchinput,
+select {
+    width: 400px;
+    height: 50px;
+    border-radius: 9px;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    padding: 8px;
+    margin: 3px 0px 10px;
+
+}
+
+
+.submitbtn {
+    background-color: rgba(26, 46, 42, 1);
+    color: rgb(249, 246, 240, 100%);
+    border: 1px solid rgba(0, 0, 0, 100%);
+    border-radius: 9px;
+    padding: 12px;
+    text-align: center;
+    margin: 20px 0px 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    height: 50px;
+    color: antiquewhite;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+}

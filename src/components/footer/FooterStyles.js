@@ -59,4 +59,3 @@ color: Black;
 margin-bottom: 20px;
 font-weight: bold;
 `;
-

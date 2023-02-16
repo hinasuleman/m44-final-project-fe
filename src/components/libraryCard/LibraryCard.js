@@ -1,22 +1,25 @@
 import React from "react";
+import { deleteFromLibrary } from "../../utilities/utilities";
 import './LibraryCard.css';
 
-const LibraryCard = ({ book }) => {
-
-    //code to grab book data from DB
-
-
-  
+const LibraryCard = ({ bookItem }) => {
+  const submitHandler = () => {
+    console.log("Clicked: remove from library")
+    const user = {user_ID:2};
+    deleteFromLibrary(bookItem, user);
+    console.log("book removed from library");
+  };
+    
   return (
     <div className="LibraryCard">
-      {book.thumbnail ? <img src="book.thumbnail" height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
+      {bookItem.thumbnail ? <img src={bookItem.thumbnail} height="200vh" alt=""/> : <img src={require("../../images/blankCover.jpg")} height="200vh" alt=""/>}
       <br></br>
-      <p className="title">{book.volumeInfo.title}</p>
-      <p className="author">{book.volumeInfo.authors}</p>
-      <button >Remove from Library</button>
+      <p className="title">{bookItem.title}</p>
+      <p className="author">{bookItem.author}</p>
+      <button onClick={() => (submitHandler())}>Remove from Library</button>
     </div>
-
   );
 };
 
 export default LibraryCard;
+

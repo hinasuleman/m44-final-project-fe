@@ -19,14 +19,14 @@ return (
 	<Container>
 		<Row>
 		<Column>
-			<Heading>Books</Heading>
+			<Heading>About Us</Heading>
 			<FooterLink href="#">Books</FooterLink>
-			<FooterLink href="/wishlistPage">Wishlist</FooterLink>
+			<FooterLink href="#">Wishlist</FooterLink>
 		</Column>
 		<Column>
 			<Heading>Services</Heading>
-			<FooterLink href="/mainpage">Main Page</FooterLink>
-			<FooterLink href="/userprofilepage">profile Page</FooterLink>
+			<FooterLink href="#">Main Page</FooterLink>
+			<FooterLink href="#">UserprofilePage</FooterLink>
 			<FooterLink href="#">Wishlist</FooterLink>
 		</Column>
 		<Column>
@@ -66,5 +66,3 @@ return (
 );
 };
 export default Footer;
-
-// You need to do a npm install --- saved style

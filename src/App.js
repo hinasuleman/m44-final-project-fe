@@ -15,7 +15,7 @@ import Footer from './components/footer/Footer';
 function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState([]); // fix: add setUser
   const [bookList, setBookList] = useState(listBooks());
   const [wishList, setWishList] = useState(wishListBooks());
 
@@ -46,51 +46,23 @@ function App() {
               } />
           </Routes>
         </div>
+        <Footer setUser={setUser}/> {/* fix: pass setUser as a prop */}
     </BrowserRouter>
   );
 }
 
-import Header from './components/header';
-
-// function App() {
-// 	return (
-// 	  <Header />
-// 	);
-// }
-
-function App() {
-  const [wishList, setWishList] = useState(wishListBooks());
-  const [user, setUser] = useState();
-
-	return ( 
-	<Column>
-		<Footer />
-		  <div>
-			<Routes>
-			  <Route exact path="/" element={<LandingPage setter={setUser}/>} />
-			  <Route exact path="/mainpage" element={
-					<MainPage 
-					  setBooks={setBooks}
-					  setBookList={setBookList}
-					  bookList={bookList}
-					  fetchError={fetchError}
-					  setFetchError={setFetchError}
-					  books={books}
-					  user={user}
-					/>
-				 }/>
-			  <Route exact path="/wishlistpage" element={
-					<WishlistPage
-					setWishList={setWishList}
-					WishList={wishList}
-					 />
-				} />
-			</Routes>
-		  </div>
-	</Column>
-	);
+function Footer ({ setUser }) {
+  return (
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
-
-
-
+// npm install --save styled-components 
 export default App;
