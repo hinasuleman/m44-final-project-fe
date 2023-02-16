@@ -23,8 +23,8 @@ const WishlistCard = ({ bookItem }) => {
             <p className="author">{bookItem.author}</p>
           </div>
           <div className="rmvaddbtns">
-            <button className="rmvbutons">Remove from Wishlist</button>
-            <button className="addbutons">Move to Library</button>
+            <button className="rmvbutons" onClick={() => (submitHandler1())}>Remove from Wishlist</button>
+            <button className="addbutons" onClick={() => (submitHandler2())}>Move to Library</button>
           </div>
     </div>
   );
