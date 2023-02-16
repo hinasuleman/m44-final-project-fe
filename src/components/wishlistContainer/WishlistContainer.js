@@ -21,6 +21,9 @@ const WishlistContainer = () => {
 
   return (
     <div className="wishListContainer">
+      <div className="wishlisttitle">
+        <h1>Wish List</h1>
+      </div>
       <div className="wlbox">
         {wishList.books.map((book, index) => (
           <WishlistCard key={index} bookItem={book} />

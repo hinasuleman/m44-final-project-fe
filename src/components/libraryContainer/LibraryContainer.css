@@ -1,13 +1,5 @@
-/* .libraryCardContainer {
-    border: 1px solid yellow;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    height: 100%;
-} */
-
 .libraryCardContainer {
+    border: 1px solid lightblue;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -17,10 +9,19 @@
 }
 
 .lcContainer {
+    border: 1px solid red;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 20px;
+}
+
+.mylibtitle {
+    display: flex;
+    justify-content: center;
+    border: 1px solid lime;
+    margin-top: 120px;
+    width: 100%;
 }

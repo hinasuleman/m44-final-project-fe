@@ -21,6 +21,9 @@ const LibraryContainer = () => {
 
   return (
     <div className="libraryCardContainer">
+      <div className="mylibtitle">
+        <h1>My Library</h1>
+      </div>
       <div className="lcContainer">
         {bookList.books.map((book, index) => (
           <LibraryCard key={index} bookItem={book} />

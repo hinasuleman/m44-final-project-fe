@@ -32,6 +32,7 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
                         />
                     </div>
                 )}
+
                 {showLibraryContainer && (
                     <LibraryContainer
                         setBooks={setBooks}
@@ -41,12 +42,18 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
                         setFetchError={setFetchError}
                         user={user}
                         onSearch={onSearch}
+
                     />
                 )}
 
                 {showCardContainer && (
                     <div className="cardcontainer">
-                        <CardContainer books={books} fetchError={fetchError} user={user} />
+                        <CardContainer
+                            books={books}
+                            fetchError={fetchError}
+                            user={user}
+                            setShowCardContainer={setShowCardContainer}
+                            setShowLibraryContainer={setShowLibraryContainer} />
                     </div>
                 )}
 
@@ -56,7 +63,6 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
                     </button>
                 </div>
 
-                {/* <LibraryContainer fetchError={fetchError} user={user}/> */}
             </div>
         </>
     );

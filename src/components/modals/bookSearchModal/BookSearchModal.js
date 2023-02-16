@@ -16,9 +16,6 @@ function BookSearchModal({ setBooks, fetchError, setFetchError, onSearch }) {
     onSearch();
   };
 
-
-
-
   return (
     <>
       <div className="searchbox">

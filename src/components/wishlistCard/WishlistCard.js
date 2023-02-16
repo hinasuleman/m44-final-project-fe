@@ -19,7 +19,7 @@ const WishlistCard = ({ bookItem }) => {
         <p className="author">{bookItem.author}</p>
       </div>
       <div className="rmvaddbtns">
-        <button className="rmvbutons">remove from wishlist</button>
+        <button className="rmvbutons">Remove from wishlist</button>
         <button className="addbutons">+ my library</button>
       </div>
     </div>
