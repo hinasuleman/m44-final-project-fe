@@ -50,7 +50,7 @@ const handleClick = () => {
                     <button type="button" onClick= {handleClick} ><img src={logoutImg} alt="" /></button>
                 </div>
 
-                </div>
+            </div>
         );
     }
 
