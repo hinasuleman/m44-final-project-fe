@@ -114,20 +114,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.box1 {
-  position: fixed;
+  background-color: rgb(239, 233, 219, 60%);
+  border-radius: 65px;
   width: 575px;
   height: 700px;
-  background-color: rgb(239, 233, 219, 60%);
-  padding: 20px;
-  border-radius: 65px;
-  text-align: center;
 }
 
 .box2 {
-  position: fixed;
+  position: absolute;
   width: 550px;
   height: 675px;
   background-color: rgb(239, 233, 219, 100%);
@@ -138,35 +132,24 @@ body {
   font-weight: 900;
 }
 
-.box2 img {
+.logo {
   height: 250px;
-  position: center;
 }
 
 .box3 {
-  position: fixed;
-  top: -25px;
-  width: 300px;
-  height: 60px;
-  left: -48px;
+  position: center;
+  top: 45px;
+  left: 4px;
   text-align: center;
   font-size: 20px;
   font-weight: 600;
+  z-index: 5;
 }
 
 .box4 {
   position: fixed;
-  top: 5px;
+  top: 365px;
   width: 250px;
   text-align: center;
   font-size: 15px;
-}
-
-.box5 {
-  position: fixed;
-  top: -76px;
-  width: 250px;
-  height: 60px;
-  text-align: center;
-  font-size: 18px;
 }
