@@ -47,7 +47,7 @@
 
 .navMenu a:hover{
     background: rgb(185, 177, 162);
-    transition:0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .navMenu img{
@@ -55,8 +55,26 @@
     color: rgb(30, 30, 30, 100%);
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
+    margin-right: 6px;
     padding: 0%;
+}
+
+.navMenu button{
+    background-color: rgb(239, 233, 219, 100%);
+    border-style: none;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 10px 15px;
+}
+
+.navMenu button img{
+    height: 22px;
+}
+
+.navMenu button:hover{
+    background: rgb(185, 177, 162);
+    transition: 0.5s ease-in-out;
 }
 
 .navbarItemsSmall{
@@ -85,5 +103,18 @@
     .navbarItemsSmall a:hover{
         background: rgb(185, 177, 162);
         transition:0.5s ease-in-out;
+    }
+    .navbarItemsSmall button{
+        background-color: rgb(239, 233, 219, 100%);
+        border-style: none;
+        border-radius: 12px;
+        padding: 5px 0px;
+    }
+    .navbarItemsSmall button:hover{
+        background: rgb(185, 177, 162);
+        transition: 0.5s ease-in-out;
+    }
+    .navbarItemsSmall button img{
+        height: 32px;
     }
 }
