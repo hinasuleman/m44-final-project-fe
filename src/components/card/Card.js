@@ -22,13 +22,15 @@ const Card = ({ book, user }) => {
       {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail}
         height="350vh" alt="" /> : <img src={require("../../images/blankCover.jpg")} height="350vh" alt="" />}
       <br></br>
+
       <div className="cardtext">
       <p className="title">{book.volumeInfo.title}</p>
       <p className="author">{book.volumeInfo.author}</p>
       </div>
+
       <div className="plusbtns">
-      <button className="librarybtn" onClick={() => (submitHandler1())}>Add to Library</button>
-      <button className="wishlistbtn" onClick={() => (submitHandler2())}>Add to Wishlist</button>
+        <button className="librarybtn" onClick={() => (submitHandler1())}>Add to Library</button>
+        <button className="wishlistbtn" onClick={() => (submitHandler2())}>Add to Wishlist</button>
       </div>
     </div>
 
