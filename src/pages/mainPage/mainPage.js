@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import CardContainer from "../../components/cardContainer/CardContainer";
 import BookSearchModal from "../../components/modals/bookSearchModal/BookSearchModal";
-<<<<<<< HEAD
-import Footer from "../../components/Footer";
-=======
 import LibraryContainer from "../../components/libraryContainer/LibraryContainer";
 import "./mainPage.css";
->>>>>>> enj/feature/pagelayout
 
 const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, books, user }) => {
     const [showCardContainer, setShowCardContainer] = useState(false);
