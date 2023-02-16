@@ -4,12 +4,12 @@
     font-family: "Roboto", sans-serif;
 }
 
-.NavbarItems{
+.navbarItems{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 17px;
-    padding: 12px 5px 5px 0px;
+    padding: 10px 0px 5px 0px;
     background-color: rgb(239, 233, 219, 100%);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     width: 98%;
@@ -30,18 +30,17 @@
 
 .navMenu{
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     grid-gap: 5px;
     list-style: none;
     align-items: center;
     justify-content: end;
-
 }
 
  .navMenu a{
     font-weight: 700;
     color: rgb(30, 30, 30, 100%);
-    padding: 11px 16px;
+    padding: 11px 15px;
     white-space: nowrap;
     border-radius: 12px; 
 }
@@ -52,15 +51,39 @@
 }
 
 .navMenu img{
-    height: 17px;
+    height: 20px;
     color: rgb(30, 30, 30, 100%);
     align-items: center;
     justify-content: center;
     margin-right: 8px;
+    padding: 0%;
 }
 
-/* @media screen and (max-width:768px){
+.navbarItemsSmall{
+    display: none;
+}
+
+@media screen and (max-width:968px){
     .navMenu{
         display: none;
     }
-} */
+    .navbarItemsSmall{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px 10px 0px;
+    }
+    .navbarItemsSmall img{
+        height: 30px;
+        margin: 0px 12px 0px 10px;
+    }
+    .navbarItemsSmall a{
+        border-radius: 12px; 
+        padding: 8px 0px 5px 0px;
+    }
+    .navbarItemsSmall a:hover{
+        background: rgb(185, 177, 162);
+        transition:0.5s ease-in-out;
+    }
+}

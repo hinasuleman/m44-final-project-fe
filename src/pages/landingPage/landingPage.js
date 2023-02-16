@@ -1,45 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "../../../src/images/logo/full_logo_transparent.png"
 import "./landingPage.css";
+import { useNavigate  } from 'react-router-dom';
+import { login } from "../../utilities/userfunctions";
 
-export default function LandingPage() {
-  function handleLogin() {
-    console.log("login functionality");
+export default function LandingPage({ setter }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const navigateSignIn = (e) => {
+    e.preventDefault();
+    navigate("/signuppage");
   }
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    console.log("executing login request")
+    await login(email, password, setter);
+    navigate("/mainpage");
+  }
+
   return (
     <div>
-      {" "}
-      {/* <form onSubmit={submitHandler}> */}
+
       <form>
-        {/* <label for="Input"></label> */}
-        <input
-          type="text"
-          id="emailBox"
-          placeholder=" Email"
-          // onChange={(event) => setEmail(event.target.value)}
+          <input
+            type="text"
+            id="emailBox"
+            placeholder="Email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <br />
+
+          <input
+            type="password"
+            id="passwordBox"
+            placeholder="Password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
         />
-        <br></br>
-        {/* <label for="Input"></label> */}
-        <input
-          type="text"
-          id="passwordBox"
-          placeholder=" Password"
-          // onChange={(event) => setPassword(event.target.value)}
-        />
-      </form>
+
+          <br></br>
+
       <div className="button-container">
         <button id="loginBtn" onClick={handleLogin}>
           Login
         </button>
-        <button id="signUpBtn" onClick={handleLogin}>
+        <button id="signUpBtn" onClick={navigateSignIn}>
           Sign Up!
         </button>
       </div>
-      <div className="box-container">
+
+    </form>
+    <div className="box-container">
         <div className="box1">Box 1</div>
-        <div className="box2">BiblioTech</div>
+        <div className="box2"><img src={logo} alt="Logo" /></div>
         <div className="box3">Welcome!</div>
-        <div className="box4">Everyones favourite BookClub.</div>
-        <div className="box5">Sign up for free to get started.</div>
+        <div className="box4">Login or sign up to get started</div>
+    
       </div>
     </div>
   );
