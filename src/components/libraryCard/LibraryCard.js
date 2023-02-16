@@ -5,8 +5,7 @@ import './LibraryCard.css';
 const LibraryCard = ({ bookItem }) => {
   const submitHandler = () => {
     console.log("Clicked: remove from library")
-    const user = {user_ID:2};
-    deleteFromLibrary(bookItem, user);
+    deleteFromLibrary(bookItem);
     console.log("book removed from library");
   };
     

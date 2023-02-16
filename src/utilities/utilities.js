@@ -15,6 +15,7 @@ export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError
 
 export const postToLibrary = async (book,user) => {
   try {
+    let cookie = readCookie("jwt_token");
     console.log(book.volumeInfo)
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
@@ -24,7 +25,7 @@ export const postToLibrary = async (book,user) => {
     if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addBook`, {
           method:"POST",
-          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${cookie}`},
           body: JSON.stringify({
               user_ID: user.user_ID,
               google_ID: book.id,
@@ -48,6 +49,7 @@ export const postToLibrary = async (book,user) => {
 
 export const postToWishlist = async (book,user) => {
   try {
+    let cookie = readCookie("jwt_token");
     console.log(book.volumeInfo)
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
@@ -57,7 +59,7 @@ export const postToWishlist = async (book,user) => {
     if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
           method:"POST",
-          headers: {"Content-Type" : "application/json"}, //token not need at the moment
+          headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${cookie}`},
           body: JSON.stringify({
               user_ID: user.user_ID,
               google_ID: book.id,
@@ -115,26 +117,16 @@ export const wishListBooks = async () => {
   }
 };
 
-//CS work in progress:
-export const deleteFromLibrary = async (book,user) => {
+export const deleteFromLibrary = async (bookItem) => {
   let cookie = readCookie("jwt_token")
   try {
-    console.log(book.volumeInfo) 
-    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
+    console.log(bookItem.volumeInfo) 
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}deleteBook`, {
           method:"DELETE",
           headers:{"Content-Type":"application/json",
                   "Authorization":`Bearer ${cookie}`},
           body: JSON.stringify({
-              user_ID: user.user_ID,
-              google_ID: book.id,
-              // title: book.volumeInfo.title,
-              // author: book.volumeInfo.authors[0],
-              // ISBN: book.volumeInfo.industryIdentifiers[0].identifier,
-              // thumbnail: book.volumeInfo.imageLinks.thumbnail,
-              // description: book.volumeInfo.description,
-              // category: category,
-              // selflink: book.selfLink,
-              // publishDate: book.volumeInfo.publishedDate 
+              google_ID: bookItem.google_ID
           }
           )
       })
@@ -143,4 +135,28 @@ export const deleteFromLibrary = async (book,user) => {
   } catch (error) {
       console.log(error)
   }
+};
+
+export const deleteFromWishlist = async (bookItem) => {
+  let cookie = readCookie("jwt_token")
+  try {
+    console.log(bookItem.volumeInfo) 
+    const response = await fetch(`${process.env.REACT_APP_REST_API_URL}deleteWishBook`, {
+          method:"DELETE",
+          headers:{"Content-Type":"application/json",
+                  "Authorization":`Bearer ${cookie}`},
+          body: JSON.stringify({
+              google_ID: bookItem.google_ID
+          }
+          )
+      })
+      const data = await response.json();
+      console.log(data);
+  } catch (error) {
+      console.log(error)
+  }
+};
+
+export const moveToLibrary = () => {
+  console.log("move to library from wishlist fn")
 };
