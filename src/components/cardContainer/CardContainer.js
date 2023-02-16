@@ -18,12 +18,14 @@ const CardContainer = ({ page, books, fetchError, user, setShowCardContainer, se
         <div className="bccontainer">
           <div className="srtbdiv">
             <h1 className="srh1">Search Results</h1>
-            {page === "library" ?
-              <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button>
-              :
-              <button className="returnbtn" onClick={toggleSearchBtn}>Return to wishlist</button>
-            }
-            {/* <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button> */}
+            <div className="scrollbtn">
+              {page === "library" ?
+                <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button>
+                :
+                <button className="returnbtn" onClick={toggleSearchBtn}>Return to wishlist</button>
+              }
+              {/* <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button> */}
+            </div>
           </div>
           {books.map((book, index) => (
             <Card key={index} book={book} />
