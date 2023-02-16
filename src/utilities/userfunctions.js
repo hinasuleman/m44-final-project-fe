@@ -19,7 +19,7 @@ export const deleteUser = async (username,email,password,setter,cookie) => {
     }
   };
 
-export const addUser = async (firstName,surname, email,password,setter) => {
+export const addUser = async (firstName,surname, email, userName, password,setter) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addUser`, {
             method:"POST",
@@ -28,6 +28,7 @@ export const addUser = async (firstName,surname, email,password,setter) => {
               firstName: firstName,
               surname: surname,
               email: email,
+              userName: userName,
               password: password
             }
             )

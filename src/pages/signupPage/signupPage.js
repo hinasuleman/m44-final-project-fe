@@ -9,6 +9,7 @@ export default function SignupPage(setter) {
     const [firstName, setFirstName] = useState("")
     const [surname, setSurname] = useState("")
     const [email, setEmail] = useState("")
+    const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
     const [confirmEmail, setConfirmEmail] = useState("false")
     
@@ -18,8 +19,7 @@ export default function SignupPage(setter) {
 
     async function submitHandler(event) {
     event.preventDefault()
-    console.log("signup functionality",firstName,surname, email,password);
-    await addUser(firstName,surname, email,password, setter);
+    await addUser(firstName, surname, email, userName, password, setter);
       navigate ("/");
     }
   
@@ -29,6 +29,7 @@ export default function SignupPage(setter) {
         <form onSubmit={(event) => submitHandler(event)}>
           <input placeholder="First name" onChange={(event) => changehandler(event,setFirstName,firstName)} />
           <input placeholder= "Surname" onChange={(event) => changehandler(event,setSurname,surname)} />
+          <input placeholder= "Username" onChange={(event) => changehandler(event,setUserName,userName)} />
           <input placeholder="Email" onChange={(event) => changehandler(event,setEmail,email)} />
           <input placeholder= "Confirm Email" onChange={(event) => changehandler(event,setConfirmEmail,confirmEmail)} />
           <input placeholder= "Password" type="password" onChange={(event) => changehandler(event,setPassword, password)} />
