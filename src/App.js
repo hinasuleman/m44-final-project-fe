@@ -12,16 +12,16 @@ import WishlistPage from "./pages/wishlistPage/wishlistPage";
 function App() {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(false);
-  const [user] = useState([]); //need to sort setUser
+  const [user, setUser] = useState();
   const [bookList, setBookList] = useState(listBooks());
   const [wishList, setWishList] = useState(wishListBooks());
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar setUser={setUser}//>
       <div>
         <Routes>
-          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/" element={<LandingPage setter={setUser}/>} />
           <Route exact path="/mainpage" element={
             <MainPage
               setBooks={setBooks}

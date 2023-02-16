@@ -4,11 +4,9 @@ import './CardContainer.css';
 
 const CardContainer = ({ books, fetchError, user, setShowCardContainer, setShowLibraryContainer, setWishList }) => {
   const toggleSearchBtn = () => {
-    console.log('!!!!!!!!!!!!')
     setShowCardContainer(false);
     setShowLibraryContainer(true);
   };
-  // console.log(toggleSearchBtn)
 
   if (!fetchError) {
     return (
@@ -19,7 +17,7 @@ const CardContainer = ({ books, fetchError, user, setShowCardContainer, setShowL
             <button className="returnbtn" onClick={toggleSearchBtn}>Return to my library</button>
           </div>
           {books.map((book, index) => (
-            <Card key={index} book={book} />
+            <Card key={index} book={book} user={user} />
           ))}
         </div>
       </div >
@@ -28,7 +26,6 @@ const CardContainer = ({ books, fetchError, user, setShowCardContainer, setShowL
     return <ErrorInFetchBooks />
   }
 };
-
 
 const ErrorInFetchBooks = () => {
   return (
