@@ -11,11 +11,6 @@ import {
 const Footer = () => {
 return (
 	<Box>
-	<h1 style={{ color: "green",
-				textAlign: "center",
-				marginTop: "-50px" }}>
-		BiblioTech
-	</h1>
 	<Container>
 		<Row>
 		<Column>
@@ -49,13 +44,6 @@ return (
 			<i className="fab fa-twitter">
 				<span style={{ marginLeft: "10px" }}>
 				Twitter
-				</span>
-			</i>
-			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-youtube">
-				<span style={{ marginLeft: "10px" }}>
-				Youtube
 				</span>
 			</i>
 			</FooterLink>
