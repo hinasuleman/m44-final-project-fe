@@ -52,13 +52,16 @@ function App() {
 
 import Header from './components/header';
 
-function App() {
-	return (
-	  <Header />
-	);
-}
+// function App() {
+// 	return (
+// 	  <Header />
+// 	);
+// }
 
 function App() {
+  const [wishList, setWishList] = useState(wishListBooks());
+  const [user, setUser] = useState();
+
 	return ( 
 	<Column>
 		<Footer />
