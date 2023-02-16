@@ -60,7 +60,7 @@ function App() {
 
 function App() {
 	return ( 
-	<BrowserRouter>
+	<Column>
 		<Footer />
 		  <div>
 			<Routes>
@@ -84,7 +84,7 @@ function App() {
 				} />
 			</Routes>
 		  </div>
-	</BrowserRouter>
+	</Column>
 	);
 }
 
