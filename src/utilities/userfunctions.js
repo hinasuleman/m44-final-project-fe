@@ -47,6 +47,7 @@ export const addUser = async (firstName,surname, email, userName, password,sette
               method:"POST",
               headers: {"Content-Type" : "application/json"},
               body: JSON.stringify({
+              username: email,
               oldEmail: email,
               email: email,
               password: password
