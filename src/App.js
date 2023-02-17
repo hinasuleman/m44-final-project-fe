@@ -9,58 +9,7 @@ import UserprofilePage from "./pages/userprofilePage/userprofilePage";
 import Navbar from './components/navigation/Navbar';
 import WishlistPage from "./pages/wishlistPage/wishlistPage";
 import Footer from './components/footer/Footer';
-
-// function App() {
-//   const [books, setBooks] = useState([]);
-//   const [fetchError, setFetchError] = useState(false);
-//   const [user, setUser] = useState([]);
-//   const [bookList, setBookList] = useState(listBooks());
-//   const [wishList, setWishList] = useState(wishListBooks());
-
-//   return (
-//     <BrowserRouter>
-//       <Navbar />
-//       <div>
-//         <Routes>
-//           <Route exact path="/" element={<LandingPage />} />
-//           <Route exact path="/mainpage" element={
-//             <MainPage
-//               setBooks={setBooks}
-//               setBookList={setBookList}
-//               bookList={bookList}
-//               fetchError={fetchError}
-//               setFetchError={setFetchError}
-//               books={books}
-//               user={user}
-//             />
-//           } />
-//           <Route exact path="/userprofilepage" element={<UserprofilePage />} />
-//           <Route exact path="/signuppage" element={<SignupPage />} />
-//           <Route exact path="/wishlistpage" element={
-//             <WishlistPage
-//               setWishList={setWishList}
-//               WishList={wishList}
-//             />
-//           } />
-//         </Routes>
-//       </div>
-//       <Navbar setUser={setUser} />
-//     </BrowserRouter>
-//   );
-// }
-
-// function Footer({ setUser }) {
-//   return (
-//     <div>
-//       {/* add your footer code here */}
-//     </div>
-//   );
-// }
-
-
-// export default App;
-
-// npm install --save styled-components 
+import Header from './components/header/Header';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -101,4 +50,12 @@ function App() {
   );
 }
 
-export default App;
+export default function AppWithHeader() {
+  return (
+    <div className="App">
+      <Header />
+      <App />
+    </div>
+  );
+}
+

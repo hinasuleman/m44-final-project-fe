@@ -1,0 +1,172 @@
+// function App() {
+//   const [books, setBooks] = useState([]);
+//   const [fetchError, setFetchError] = useState(false);
+//   const [user, setUser] = useState([]);
+//   const [bookList, setBookList] = useState(listBooks());
+//   const [wishList, setWishList] = useState(wishListBooks());
+
+//   return (
+//     <BrowserRouter>
+//       <Navbar />
+//       <div>
+//         <Routes>
+//           <Route exact path="/" element={<LandingPage />} />
+//           <Route exact path="/mainpage" element={
+//             <MainPage
+//               setBooks={setBooks}
+//               setBookList={setBookList}
+//               bookList={bookList}
+//               fetchError={fetchError}
+//               setFetchError={setFetchError}
+//               books={books}
+//               user={user}
+//             />
+//           } />
+//           <Route exact path="/userprofilepage" element={<UserprofilePage />} />
+//           <Route exact path="/signuppage" element={<SignupPage />} />
+//           <Route exact path="/wishlistpage" element={
+//             <WishlistPage
+//               setWishList={setWishList}
+//               WishList={wishList}
+//             />
+//           } />
+//         </Routes>
+//       </div>
+//       <Navbar setUser={setUser} />
+//     </BrowserRouter>
+//   );
+// }
+
+// function Footer({ setUser }) {
+//   return (
+//     <div>
+//       {/* add your footer code here */}
+//     </div>
+//   );
+// }
+
+
+// export default App;
+
+// import React from "react";
+// import {
+//   Box,
+//   Container,
+//   Row,
+//   HeaderLink,
+//   Heading,
+// } from "./HeaderStyles";
+
+// const Header = () => {
+// return (
+// 	<Box>
+// 	<h1 style={{ color: "green",
+// 				textAlign: "center",
+// 				marginTop: "-50px" }}>
+// 		BiblioTech
+// 	</h1>
+// 	<Container>
+// 		<Row>
+//       <Heading>Social Media</Heading>
+// 			<HeaderLink href="#">
+// 			<i className="fab fa-facebook-f">
+// 				<span style={{ marginLeft: "10px" }}>
+// 				Facebook
+// 				</span>
+// 			</i>
+// 			</HeaderLink>
+// 			<HeaderLink href="#">
+// 			<i className="fab fa-instagram">
+// 				<span style={{ marginLeft: "10px" }}>
+// 				Instagram
+// 				</span>
+// 			</i>
+// 			</HeaderLink>
+// 			<HeaderLink href="#">
+// 			<i className="fab fa-twitter">
+// 				<span style={{ marginLeft: "10px" }}>
+// 				Twitter
+// 				</span>
+// 			</i>
+// 			</HeaderLink>
+// 			<HeaderLink href="#">
+// 			<i className="fab fa-youtube">
+// 				<span style={{ marginLeft: "10px" }}>
+// 				Youtube
+// 				</span>
+// 			</i>
+// 			</HeaderLink>
+// 		</Row>
+// 	</Container>
+// 	</Box>
+// );
+// };
+// export default Header;
+
+
+// import { useState } from "react";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { listBooks, wishListBooks } from "../src/utilities/utilities";
+// import './App.css';
+// import LandingPage from "./pages/landingPage/landingPage";
+// import MainPage from "./pages/mainPage/mainPage";
+// import SignupPage from "./pages/signupPage/signupPage";
+// import UserprofilePage from "./pages/userprofilePage/userprofilePage";
+// import Navbar from './components/navigation/Navbar';
+// import WishlistPage from "./pages/wishlistPage/wishlistPage";
+// import Footer from './components/footer/Footer';
+// import Header from './components/header/Header';
+
+// npm install --save styled-components 
+
+// function App() {
+//   const [books, setBooks] = useState([]);
+//   const [fetchError, setFetchError] = useState(false);
+//   const [user, setUser] = useState([]); // fix: add setUser
+//   const [bookList, setBookList] = useState(listBooks());
+//   const [wishList, setWishList] = useState(wishListBooks());
+
+//   return (
+//     <BrowserRouter>
+//       <Navbar/>
+//         <div>
+//           <Routes>
+//             <Route exact path="/" element={<LandingPage />} />
+//             <Route exact path="/mainpage" element={
+//                   <MainPage 
+//                     setBooks={setBooks}
+//                     setBookList={setBookList}
+//                     bookList={bookList}
+//                     fetchError={fetchError}
+//                     setFetchError={setFetchError}
+//                     books={books}
+//                     user={user}
+//                   />
+//                }/>
+//             <Route exact path="/userprofilepage" element={<UserprofilePage/>} />
+//             <Route exact path="/signuppage" element={<SignupPage />} />
+//             <Route exact path="/wishlistpage" element={
+//                   <WishlistPage
+//                   setWishList={setWishList}
+//                   WishList={wishList}
+//                    />
+//               } />
+//           </Routes>
+//         </div>
+//         <Footer />
+//     </BrowserRouter>
+//   );
+// }
+
+// import Header from './components/Header';
+
+// function App() {
+// 	return (
+// 	  <div className="App">
+// 		<Header />
+// 		{/* rest of the JSX code here */}
+// 	  </div>
+// 	);
+// }
+
+// export default App;
