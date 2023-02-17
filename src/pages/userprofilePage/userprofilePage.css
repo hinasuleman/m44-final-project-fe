@@ -1,0 +1,180 @@
+.body {
+  background-color: rgba(239, 233, 219, 1);
+}
+
+.userprofile_container {
+  /* background-color: rgb(255, 255, 255, 100%); */
+  position: fixed;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#currentEmailBox1 {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: -155px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#newEmailBox {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: -104px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#currentPasswordBox1 {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 19px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#newPasswordBox {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 68px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#updateEmailBtn {
+  background-color: rgba(26, 46, 42, 1);
+  position: absolute;
+  top: -60px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 171px;
+  height: 31px;
+  color: rgb(249, 246, 240, 100%);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 100%);
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#updatePasswordBtn {
+  background-color: rgba(26, 46, 42, 1);
+  position: absolute;
+  top: 112px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 171px;
+  height: 30px;
+  color: rgb(249, 246, 240, 100%);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 100%);
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#deleteUserBtn {
+  background-color: rgba(231, 45, 18, 1);
+  position: absolute;
+  top: 150px;
+  left: 89px;
+  transform: translate(-50%, -50%);
+  width: 105px;
+  height: 30px;
+  color: rgb(249, 246, 240, 100%);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(240, 19, 19);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.box1 {
+  position: fixed;
+  top: -250px;
+  width: 528px;
+  height: 574px;
+  background-color: rgba(242, 239, 224, 1);
+  color: antiquewhite;
+  /* z-index: -1; */
+  left: -266px;
+}
+
+.box2 {
+  position: fixed;
+  z-index: -1;
+}
+
+.box2 img {
+  position: fixed;
+  z-index: -1;
+  top: -314px;
+  width: 94px;
+  height: 114px;
+  background: none;
+  left: -249px;
+}

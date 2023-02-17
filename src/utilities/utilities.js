@@ -16,13 +16,12 @@ export const fetchBooks = async (searchTerm, searchType, setBooks, setFetchError
 export const postToLibrary = async (book,user) => {
   try {
     let cookie = readCookie("jwt_token");
-    console.log(book.volumeInfo)
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
-    console.log(category);
     if (!book.volumeInfo.description == null) {book.volumeInfo.description = "No Description Information"};  
-    if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
+    if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};
     if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
+    //if (book.volumeInfo.imageLinks.thumbnail === null || book.volumeInfo.imageLinks.thumbnail === "undefined") {book.volumeInfo.imageLinks.thumbnail = "https://cdn.pixabay.com/photo/2018/01/03/09/09/book-3057901_960_720.png"};  
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addBook`, {
           method:"POST",
           headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${cookie}`},
@@ -35,7 +34,7 @@ export const postToLibrary = async (book,user) => {
               thumbnail: book.volumeInfo.imageLinks.thumbnail,
               description: book.volumeInfo.description,
               category: category,
-              selflink: book.selfLink,
+              selfLink: book.selfLink,
               publishDate: book.volumeInfo.publishedDate 
           }
           )
@@ -50,13 +49,12 @@ export const postToLibrary = async (book,user) => {
 export const postToWishlist = async (book,user) => {
   try {
     let cookie = readCookie("jwt_token");
-    console.log(book.volumeInfo)
     const blankImage = require("../images/blankCover.jpg");
     let category  = "No Category Information";
-    console.log(category);
     if (!book.volumeInfo.description == null) {book.volumeInfo.description = "No Description Information"};  
     if (!book.volumeInfo.publishedDate == null) {book.volumeInfo.publishedDate = "No Publication Date Information"};  
-    if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage};  
+    //if (book.volumeInfo.imageLinks.thumbnail === null || book.volumeInfo.imageLinks.thumbnail === "undefined") {book.volumeInfo.imageLinks.thumbnail = "https://cdn.pixabay.com/photo/2018/01/03/09/09/book-3057901_960_720.png"};
+    if (!book.volumeInfo.imageLinks.thumbnail == null) {book.volumeInfo.imageLinks.thumbnail = blankImage}; 
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}addWishBook`, {
           method:"POST",
           headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${cookie}`},
@@ -69,7 +67,7 @@ export const postToWishlist = async (book,user) => {
               thumbnail: book.volumeInfo.imageLinks.thumbnail,
               description: book.volumeInfo.description,
               category: category,
-              selflink: book.selfLink,
+              selfLink: book.selfLink,
               publishDate: book.volumeInfo.publishedDate 
           }
           )
@@ -92,7 +90,6 @@ export const listBooks = async () => {
       }
     });
     const data = await response.json();
-    console.log("listBooks fn data: ", data);
     return data;
   } catch (error) {
     console.log(error);
@@ -120,7 +117,6 @@ export const wishListBooks = async () => {
 export const deleteFromLibrary = async (bookItem) => {
   let cookie = readCookie("jwt_token")
   try {
-    console.log(bookItem.volumeInfo) 
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}deleteBook`, {
           method:"DELETE",
           headers:{"Content-Type":"application/json",
@@ -140,7 +136,6 @@ export const deleteFromLibrary = async (bookItem) => {
 export const deleteFromWishlist = async (bookItem) => {
   let cookie = readCookie("jwt_token")
   try {
-    console.log(bookItem.volumeInfo) 
     const response = await fetch(`${process.env.REACT_APP_REST_API_URL}deleteWishBook`, {
           method:"DELETE",
           headers:{"Content-Type":"application/json",

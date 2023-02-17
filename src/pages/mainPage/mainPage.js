@@ -53,7 +53,8 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
                             fetchError={fetchError}
                             user={user}
                             setShowCardContainer={setShowCardContainer}
-                            setShowLibraryContainer={setShowLibraryContainer} />
+                            setShowLibraryContainer={setShowLibraryContainer}
+                            page="library" />
                     </div>
                 )}
 
@@ -69,5 +70,3 @@ const MainPage = ({ setBooks, setBookList, bookList, fetchError, setFetchError, 
 };
 
 export default MainPage;
-
-

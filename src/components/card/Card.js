@@ -12,7 +12,9 @@ const Card = ({ book, user }) => {
 
   const submitHandler2 = () => {
     // e.preventDefault();
+    console.log("user: ",user);
     const userID = user.user_ID;
+    console.log("userID: ",userID);
     postToWishlist(book,userID);
     console.log("book added to Wishlist");
   };

@@ -1,10 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Roboto&family=Roboto+Mono:wght@900&display=swap");
+
+body {
+  background-color: rgba(249, 246, 240, 1);
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
 .deleteuserprofile {
-    border: 5px solid red;
-    height: 500px;
-    display: flex;
-    justify-content: center;
+  background-color: rgba(249, 246, 240, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
 }
 
 .deleteForm {
-    border: 1px solid blue;
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid gray;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.confirmDeleteBtn {
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid grey;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.reConfirmDeleteBtn {
+  background-color: rgba(249, 246, 240, 1);
+  border: 1px solid grey;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  padding: 9px;
+}
+
+.Danger {
+  background-color: rgba(26, 46, 42, 1);
+  color: antiquewhite;
+  border: 1px solid grey;
+  position: fixed;
+  top: 59%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  padding: 13px;
+}
+
+#deleteBtn {
+  background-color: rgba(26, 46, 42, 1);
+  position: fixed;
+  color: antiquewhite;
+  border-radius: 9px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  top: 240px;
+  left: 291px;
+  width: 170px;
+}
+
+#currentEmailBox2 {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 62px;
+  left: 386px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#currentPasswordBox2 {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 115px;
+  left: 386px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+#usernameBox {
+  background-color: rgb(255, 255, 255, 100%);
+  position: absolute;
+  top: 35%;
+  left: 386px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 40%);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
